@@ -10,12 +10,16 @@ export interface Service {
   icon: string; // Assuming icon is a string (path to the icon)
 }
 
+export interface ServiceCardType extends Service {
+  index: number;
+}
+
 export interface Technology {
   name: string;
   icon: string; // Assuming icon is a string (path to the icon)
 }
 
-export interface Experience {
+export interface ExperienceType {
   title: string;
   company_name: string;
   icon: string; // Assuming icon is a string (path to the icon)
@@ -32,10 +36,18 @@ export interface Testimonial {
   image: string;
 }
 
+export interface FeedbacksCardType extends Testimonial {
+  index: number;
+}
+
 export interface Project {
   name: string;
   description: string;
   tags: { name: string; color: string }[];
   image: string; // Assuming image is a string (path to the image)
   source_code_link: string;
+}
+
+export interface ProjectCardProps extends Project {
+  index: number;
 }

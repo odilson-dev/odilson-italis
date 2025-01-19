@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import close from "../assets/close.svg";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
-import close from "../assets/close.svg";
 import { navLinks } from "../constants";
 import { styles } from "../styles";
 
@@ -37,7 +37,12 @@ const Navbar = () => {
               } hover:text-white cursor-pointer text-[18px] font-medium`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a
+                href={link.url ? link.url : `#${link.id}`}
+                target={link.url ? "_blank" : undefined}
+              >
+                {link.title}
+              </a>
             </li>
           ))}
         </ul>
@@ -66,7 +71,12 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <a
+                  href={link.url ? link.url : `#${link.id}`}
+                  target={link.url ? "_blank" : undefined}
+                >
+                  {link.title}
+                </a>
               </li>
             ))}
           </ul>

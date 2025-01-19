@@ -1,4 +1,13 @@
-export const textVariant = (delay) => {
+export const textVariant = (
+  delay: number
+): {
+  hidden: { y: number; opacity: number };
+  show: {
+    y: number;
+    opacity: number;
+    transition: { type: string; duration: number; delay: number };
+  };
+} => {
   return {
     hidden: {
       y: -50,
@@ -16,7 +25,20 @@ export const textVariant = (delay) => {
   };
 };
 
-export const fadeIn = (direction, type, delay, duration) => {
+export const fadeIn = (
+  direction: "left" | "right" | "up" | "down",
+  type: string,
+  delay: number,
+  duration: number
+): {
+  hidden: { x: number; y: number; opacity: number };
+  show: {
+    x: number;
+    y: number;
+    opacity: number;
+    transition: { type: string; delay: number; duration: number; ease: string };
+  };
+} => {
   return {
     hidden: {
       x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -37,7 +59,17 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
-export const zoomIn = (delay, duration) => {
+export const zoomIn = (
+  delay: number,
+  duration: number
+): {
+  hidden: { scale: number; opacity: number };
+  show: {
+    scale: number;
+    opacity: number;
+    transition: { type: string; delay: number; duration: number; ease: string };
+  };
+} => {
   return {
     hidden: {
       scale: 0,
@@ -56,7 +88,19 @@ export const zoomIn = (delay, duration) => {
   };
 };
 
-export const slideIn = (direction, type, delay, duration) => {
+export const slideIn = (
+  direction: "left" | "right" | "up" | "down",
+  type: string,
+  delay: number,
+  duration: number
+): {
+  hidden: { x: string | number; y: string | number };
+  show: {
+    x: number;
+    y: number;
+    transition: { type: string; delay: number; duration: number; ease: string };
+  };
+} => {
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
@@ -75,7 +119,15 @@ export const slideIn = (direction, type, delay, duration) => {
   };
 };
 
-export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (
+  staggerChildren: number,
+  delayChildren?: number
+): {
+  hidden: object;
+  show: {
+    transition: { staggerChildren: number; delayChildren: number | undefined };
+  };
+} => {
   return {
     hidden: {},
     show: {

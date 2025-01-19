@@ -8,7 +8,7 @@ import {
   Navbar,
   StarsCanvas,
   Works,
-  Tech
+  Tech,
 } from "./components";
 const App = () => {
   return (
@@ -18,8 +18,7 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <About />  
-
+        <About />
         <Experience />
         <Tech />
         <Works />

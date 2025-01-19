@@ -1,4 +1,3 @@
-import React from "react";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
 import ComputersCanvas from "./canvas/Computers";
@@ -14,11 +13,11 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi I'm <span className="text-[#914eff]">Odilson</span>
+            Hi, I'm <span className="text-[#914eff]">Odilson</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-2`}>
-            I develop 3D visuals, user <br className="sm:block hidden" />{" "}
-            interfaces and web applications
+            I develop web and mobile applications{" "}
+            <br className="sm:block hidden" /> that turn visitors into customers
           </p>
         </div>
       </div>

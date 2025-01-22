@@ -19,6 +19,11 @@ export interface Technology {
   icon: string; // Assuming icon is a string (path to the icon)
 }
 
+export interface Social {
+  name: "GitHub" | "Twitter" | "LinkedIn" | "Instagram" | "Facebook";
+  url: string;
+}
+
 export interface ExperienceType {
   title: string;
   company_name: string;

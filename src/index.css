@@ -12,6 +12,18 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
+}
 
 .hash-span {
   margin-top: -100px;

@@ -10,6 +10,7 @@ import {
   Works,
   Tech,
 } from "./components";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,9 +25,11 @@ const App = () => {
         <Works />
 
         <Feedbacks />
+
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>

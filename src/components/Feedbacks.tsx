@@ -5,6 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 import { FeedbacksCardType } from "../types";
+import { useRef, useEffect, useState } from "react";
 
 const FeedbackCard = ({
   index,
@@ -15,8 +16,8 @@ const FeedbackCard = ({
   image,
 }: FeedbacksCardType) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+    variants={fadeIn("left", "spring", index * 0.5, 0.75)}
+    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full flex-shrink-0"
   >
     <p className="text-white font-black text-[48px]">"</p>
 
@@ -44,8 +45,27 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
+  const testimonialWidth = 320; // width of each testimonial + margin
+  const totalWidth = testimonials.length * testimonialWidth;
+  const animationDuration = totalWidth / 50; // Adjust speed here
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+    <div className={`mt-12 bg-black-100 rounded-[20px]  overflow-hidden`}>
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
@@ -54,7 +74,13 @@ const Feedbacks = () => {
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div
+        className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 animate-marquee`}
+        style={{
+          width: `${totalWidth * 2}px`,
+          animationDuration: `${animationDuration}s`,
+        }}
+      >
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}

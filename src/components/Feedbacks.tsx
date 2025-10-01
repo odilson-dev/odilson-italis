@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { useEffect, useRef, useState } from "react";
 import { testimonials } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
 import { FeedbacksCardType } from "../types";
-import { useRef, useEffect, useState } from "react";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const FeedbackCard = ({
   index,
@@ -63,7 +63,9 @@ const Feedbacks = () => {
 
   const testimonialWidth = 320; // width of each testimonial + margin
   const totalWidth = testimonials.length * testimonialWidth;
-  const animationDuration = totalWidth / 50; // Adjust speed here
+  const animationDuration =
+    containerWidth > 0 ? totalWidth / (containerWidth * 0.05) : totalWidth / 50; // Adjust speed here
+  const shouldAnimate = totalWidth > containerWidth;
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]  overflow-hidden`}>
       <div
@@ -77,8 +79,11 @@ const Feedbacks = () => {
       <div
         className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 animate-marquee`}
         style={{
-          width: `${totalWidth * 2}px`,
-          animationDuration: `${animationDuration}s`,
+          width: shouldAnimate ? `${totalWidth * 2}px` : "auto",
+          animationDuration: shouldAnimate
+            ? `${animationDuration}s`
+            : undefined,
+          animationIterationCount: shouldAnimate ? "infinite" : 1,
         }}
       >
         {testimonials.map((testimonial, index) => (

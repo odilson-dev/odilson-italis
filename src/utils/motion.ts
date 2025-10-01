@@ -120,19 +120,14 @@ export const slideIn = (
 };
 
 export const staggerContainer = (
-  staggerChildren: number,
+  staggerChildren?: number,
   delayChildren?: number
-): {
-  hidden: object;
-  show: {
-    transition: { staggerChildren: number; delayChildren: number | undefined };
-  };
-} => {
+) => {
   return {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: staggerChildren,
+        staggerChildren: staggerChildren || 0.1,
         delayChildren: delayChildren || 0,
       },
     },

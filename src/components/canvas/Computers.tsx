@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import Loader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   return (
     <mesh>
@@ -33,7 +33,7 @@ const ComputersCanvas = () => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
 
-    const handleMediaQueryChange = (event) => {
+    const handleMediaQueryChange = (event: any) => {
       setIsMobile(event.matches);
     };
 

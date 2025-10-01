@@ -8,7 +8,7 @@ import { slideIn } from "../utils/motion";
 import { EarthCanvas } from "./canvas";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -17,7 +17,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { target } = e;
     const { name, value } = target;
 
@@ -27,7 +27,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
 
@@ -47,7 +47,9 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert(`Thank you ${form.name}. I will get back to you as soon as possible.`);
+          alert(
+            `Thank you ${form.name}. I will get back to you as soon as possible.`
+          );
 
           setForm({
             name: "",

@@ -5,11 +5,20 @@
 @tailwind utilities;
 
 @layer utilities {
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  
   .line-clamp-4 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
   
   .line-clamp-none {
@@ -17,6 +26,7 @@
     display: block;
     -webkit-box-orient: unset;
     -webkit-line-clamp: unset;
+    line-clamp: unset;
   }
 }
 

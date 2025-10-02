@@ -50,9 +50,10 @@ const Contact = () => {
         () => {
           setLoading(false);
 
-          toast.success(
-            `Thank you ${form.name}. I will get back to you as soon as possible.`
-          );
+          toast.success(`Thank you ${form.name}!`, {
+            description: "I will get back to you as soon as possible.",
+            duration: 5000,
+          });
 
           setForm({
             name: "",
@@ -91,6 +92,7 @@ const Contact = () => {
               type="text"
               name="name"
               value={form.name}
+              required
               onChange={handleChange}
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
@@ -101,9 +103,10 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              required
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your email address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -112,6 +115,7 @@ const Contact = () => {
             <textarea
               rows={7}
               name="message"
+              required
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"

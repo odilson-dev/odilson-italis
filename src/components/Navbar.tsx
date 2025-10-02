@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import close from "../assets/close.svg";
-import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
+import logo from "../assets/profile.png";
 import { navLinks } from "../constants";
 import { styles } from "../styles";
 

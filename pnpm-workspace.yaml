@@ -1,0 +1,6 @@
+ignoredBuiltDependencies:
+  - esbuild
+  - react-vertical-timeline-component
+
+onlyBuiltDependencies:
+  - '@swc/core'

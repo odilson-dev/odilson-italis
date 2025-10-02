@@ -137,6 +137,21 @@ const experiences: ExperienceType[] = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
+
+  {
+    title: "Backend Developer",
+    company_name: "Notiflow (Open Source)",
+    icon: nodejs,
+    iconBg: "#E6DEDD",
+    date: "September 2024 - November 2024",
+    points: [
+      "Contributed as a backend developer to an open-source notification platform.",
+      "Built RESTful APIs using Express and Node.js with robust validation and error handling.",
+      "Integrated data persistence and caching, and optimized endpoints for performance.",
+      "Wrote unit/integration tests and participated in code reviews and documentation.",
+    ],
+  },
+
   // {
   //   title: "React Native Developer",
   //   company_name: "Tesla",
@@ -302,69 +317,6 @@ const testimonials: Testimonial[] = [
 ];
 
 const projects: Project[] = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
   {
     name: "Car Rent",
     description:

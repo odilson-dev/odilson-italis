@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
+import { toast } from "sonner";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
@@ -29,6 +30,7 @@ const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+
     setLoading(true);
 
     emailjs
@@ -47,7 +49,8 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert(
+
+          toast.success(
             `Thank you ${form.name}. I will get back to you as soon as possible.`
           );
 
@@ -61,7 +64,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          toast.error("Ahh, something went wrong. Please try again.");
         }
       );
   };

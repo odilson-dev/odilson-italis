@@ -125,11 +125,11 @@ const technologies: Technology[] = [
 
 const experiences: ExperienceType[] = [
   {
-    title: "React/Next.js Developer",
+    title: "Web/Mobile Developer",
     company_name: "CreaticsHub",
     icon: creaticshub,
     iconBg: "#383E56",
-    date: "November 2024 - February 2025",
+    date: "November 2024 - Now",
     points: [
       "Developing and maintaining web applications using React/Next.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -446,11 +446,11 @@ const socials: Social[] = [
 
     url: "https://linkedin.com/in/odilson-dev",
   },
-  {
-    name: "Instagram",
+  // {
+  //   name: "Instagram",
 
-    url: "https://instagram.com/odilson.dev",
-  },
+  //   url: "https://instagram.com/odilson.dev",
+  // },
   // {
   //   name: "Facebook",
   //   url: "https://facebook.com/odilson-dev",

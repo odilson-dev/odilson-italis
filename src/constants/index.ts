@@ -1,23 +1,23 @@
 import {
   backend,
-  carrent,
+  battleship,
   creaticshub,
   creator,
   css,
   figma,
   git,
   javascript,
-  jobit,
   mobile,
   mongodb,
   nextjs,
   nodejs,
   prisma,
   reactjs,
+  shoppingcart,
   tailwind,
   threejs,
-  tripguide,
   typescript,
+  weather,
   web,
 } from "../assets";
 import {
@@ -318,67 +318,66 @@ const testimonials: Testimonial[] = [
 
 const projects: Project[] = [
   {
-    name: "Car Rent",
+    name: "Weather App",
+    description: "A weather forecast site using the open map weather API.",
+    tags: [
+      {
+        name: "promises",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html-css-js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "async await",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: weather,
+    source_code_link: "https://github.com/weather-app",
+  },
+  {
+    name: "Battleship",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Battleship is a classic two-player guessing game where each player attempts to sink the other player's fleet of ships by guessing the coordinates of the ships on a grid.",
+    tags: [
+      {
+        name: "tdd",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "jest-test",
+        color: "green-text-gradient",
+      },
+      {
+        name: "html-css-js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: battleship,
+    source_code_link: "https://github.com/battleship",
+  },
+  {
+    name: "Shopping Cart",
+    description:
+      "Shopping Cart is a classic React project that allows users to browse and purchase products using a simulated shopping cart.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "api",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "state management",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: shoppingcart,
+    source_code_link: "https://github.com/shopping-cart",
   },
 ];
 

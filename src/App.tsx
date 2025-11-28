@@ -1,8 +1,10 @@
+import Hero from "./sections/hero";
+
 function App() {
   return (
-    <section className="font-bold text-red-600">
-      This is my 3d portfolio
-    </section>
+    <>
+      <Hero />
+    </>
   );
 }
 

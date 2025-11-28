@@ -1,20 +1,25 @@
-import { useRef } from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
 
+import CountUp from "react-countup";
 import { counterItems } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedCounter = () => {
-  const counterRef = useRef(null);
-  const countersRef = useRef([]);
+  const counterRef = useRef<HTMLDivElement>(null);
+  const countersRef = useRef<HTMLDivElement[]>([]);
 
   useGSAP(() => {
     countersRef.current.forEach((counter, index) => {
-      const numberElement = counter.querySelector(".counter-number");
+      const numberElement = counter.querySelector(
+        ".counter-number"
+      ) as HTMLElement;
       const item = counterItems[index];
+
+      if (!numberElement) return;
 
       // Set initial value to 0
       gsap.set(numberElement, { innerText: "0" });
@@ -43,11 +48,13 @@ const AnimatedCounter = () => {
         {counterItems.map((item, index) => (
           <div
             key={index}
-            ref={(el) => el && (countersRef.current[index] = el)}
+            ref={(el: HTMLDivElement | null) => {
+              if (el) countersRef.current[index] = el;
+            }}
             className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
           >
             <div className="counter-number text-white-50 text-5xl font-bold mb-2">
-              0 {item.suffix}
+              <CountUp end={item.value} suffix={item.suffix} duration={5} />
             </div>
             <div className="text-white-50 text-lg">{item.label}</div>
           </div>

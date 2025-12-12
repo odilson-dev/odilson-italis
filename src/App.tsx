@@ -1,4 +1,3 @@
-import LogoShowcase from "./components/LogoShowCase";
 import NavBar from "./components/NavBar";
 import Contact from "./sections/Contact";
 import Experience from "./sections/experience";
@@ -15,7 +14,7 @@ function App() {
       <Hero />
       <AppShowcase />
       {/* Display company Logo I already collaborate with */}
-      <LogoShowcase />
+      {/* <LogoShowcase /> */}
       <FeatureCards />
       <Experience />
       <TechStack />

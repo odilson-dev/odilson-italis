@@ -27,7 +27,7 @@ const NavBar = () => {
       <div className="inner">
         <a href="#hero" className="logo flex items-center gap-2">
           <img
-            src="./public/images/profile.png"
+            src="./images/profile.png"
             alt="Odilson Italis"
             className="w-10 h-10 rounded-full object-cover border border-white-50"
           />

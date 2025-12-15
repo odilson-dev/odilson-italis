@@ -1,420 +1,295 @@
-import {
-  backend,
-  battleship,
-  creaticshub,
-  creator,
-  css,
-  figma,
-  git,
-  javascript,
-  mobile,
-  mongodb,
-  nextjs,
-  nodejs,
-  prisma,
-  reactjs,
-  shoppingcart,
-  tailwind,
-  threejs,
-  typescript,
-  weather,
-  web,
-} from "../assets";
-import {
-  ExperienceType,
+import type {
+  Ability,
+  CounterItem,
+  ExpCard,
+  ExpLogo,
+  LogoIcon,
   NavLink,
-  Project,
-  Service,
-  Social,
-  Technology,
+  SocialImg,
+  TechStackIcon,
+  TechStackImg,
   Testimonial,
-} from "../types";
+  Word,
+} from "./types";
 
-// Update existing constants to use the defined interfaces
 const navLinks: NavLink[] = [
   {
-    id: "about",
-    title: "About",
+    name: "Work",
+    link: "#work",
   },
   {
-    id: "work",
-    title: "Work",
+    name: "Experience",
+    link: "#experience",
   },
   {
-    id: "projects",
-    title: "Projects",
+    name: "Skills",
+    link: "#skills",
   },
   {
-    id: "resume",
-    title: "Resume",
-    url: "https://rxresu.me/odilson-dev/odilson-italis-resume",
-  },
-  {
-    id: "contact",
-    title: "Hire me",
+    name: "Testimonials",
+    link: "#testimonials",
   },
 ];
 
-const services: Service[] = [
+const words: Word[] = [
+  { text: "Ideas", imgPath: "/images/ideas.svg" },
+  { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Designs", imgPath: "/images/designs.svg" },
+  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Ideas", imgPath: "/images/ideas.svg" },
+  { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Designs", imgPath: "/images/designs.svg" },
+  { text: "Code", imgPath: "/images/code.svg" },
+];
+
+const counterItems: CounterItem[] = [
+  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 200, suffix: "+", label: "Satisfied Clients" },
+  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 90, suffix: "%", label: "Client Retention Rate" },
+];
+
+const logoIconsList: LogoIcon[] = [
   {
-    title: "Web Developer",
-    icon: web,
+    imgPath: "/images/logos/company-logo-1.png",
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    imgPath: "/images/logos/company-logo-2.png",
   },
   {
-    title: "Full Stack Developer",
-    icon: backend,
+    imgPath: "/images/logos/company-logo-3.png",
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    imgPath: "/images/logos/company-logo-4.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-5.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-6.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-7.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-8.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-9.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-10.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-11.png",
   },
 ];
 
-const technologies: Technology[] = [
+const abilities: Ability[] = [
   {
-    name: "CSS 3",
-    icon: css,
+    imgPath: "/images/seo.png",
+    title: "Quality Focus",
+    desc: "Delivering high-quality results while maintaining attention to every detail.",
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    imgPath: "/images/chat.png",
+    title: "Reliable Communication",
+    desc: "Keeping you updated at every step to ensure transparency and clarity.",
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  { name: "Next JS", icon: nextjs },
-  {
-    name: "Prisma",
-    icon: prisma,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
+    imgPath: "/images/time.png",
+    title: "On-Time Delivery",
+    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
   },
 ];
 
-const experiences: ExperienceType[] = [
+const techStackImgs: TechStackImg[] = [
   {
-    title: "Web/Mobile Developer",
-    company_name: "CreaticsHub",
-    icon: creaticshub,
-    iconBg: "#383E56",
-    date: "November 2024 - Now",
-    points: [
-      "Developing and maintaining web applications using React/Next.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+    name: "React Developer",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    name: "Python Developer",
+    imgPath: "/images/logos/python.svg",
+  },
+  {
+    name: "Backend Developer",
+    imgPath: "/images/logos/node.png",
+  },
+  {
+    name: "Interactive Developer",
+    imgPath: "/images/logos/three.png",
+  },
+  {
+    name: "Project Manager",
+    imgPath: "/images/logos/git.svg",
+  },
+];
+
+const techStackIcons: TechStackIcon[] = [
+  {
+    name: "React Developer",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Python Developer",
+    modelPath: "/models/python-transformed.glb",
+    scale: 0.8,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Backend Developer",
+    modelPath: "/models/node-transformed.glb",
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
+  {
+    name: "Interactive Developer",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Project Manager",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+];
+
+const expCards: ExpCard[] = [
+  {
+    review:
+      "Odilson brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    imgPath: "/images/logos/creaticshub_2.png",
+    logoPath: "/images/logos/creaticshub_1.png",
+    title: "Frontend Developer",
+    date: "November 2024 - Present",
+    responsibilities: [
+      "Developed and maintained user-facing features for the CreaticsHub WebApp.",
+      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
+      "Optimized web applications for maximum speed and scalability.",
     ],
   },
-
-  {
-    title: "Backend Developer",
-    company_name: "Notiflow (Open Source)",
-    icon: nodejs,
-    iconBg: "#E6DEDD",
-    date: "September 2024 - November 2024",
-    points: [
-      "Contributed as a backend developer to an open-source notification platform.",
-      "Built RESTful APIs using Express and Node.js with robust validation and error handling.",
-      "Integrated data persistence and caching, and optimized endpoints for performance.",
-      "Wrote unit/integration tests and participated in code reviews and documentation.",
-    ],
-  },
-
   // {
+  //   review:
+  //     "Adrian's contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+  //   imgPath: "/images/exp2.png",
+  //   logoPath: "/images/logo2.png",
+  //   title: "Full Stack Developer",
+  //   date: "June 2020 - December 2023",
+  //   responsibilities: [
+  //     "Led the development of Docker's web applications, focusing on scalability.",
+  //     "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
+  //     "Contributed to open-source projects that were used with the Docker ecosystem.",
+  //   ],
+  // },
+  // {
+  //   review:
+  //     "Adrian's work on Appwrite's mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+  //   imgPath: "/images/exp3.png",
+  //   logoPath: "/images/logo3.png",
   //   title: "React Native Developer",
-  //   company_name: "Tesla",
-  //   icon: tesla,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2021 - Feb 2022",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   date: "March 2019 - May 2020",
+  //   responsibilities: [
+  //     "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
+  //     "Improved app performance and user experience through code optimization and testing.",
+  //     "Coordinated with the product team to implement features based on feedback.",
   //   ],
   // },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+];
+
+const expLogos: ExpLogo[] = [
+  {
+    name: "logo1",
+    imgPath: "/images/logo1.png",
+  },
+  {
+    name: "logo2",
+    imgPath: "/images/logo2.png",
+  },
+  {
+    name: "logo3",
+    imgPath: "/images/logo3.png",
+  },
 ];
 
 const testimonials: Testimonial[] = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Esther Howard",
+    mentions: "@estherhoward",
+    review:
+      "I can't say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+    imgPath: "/images/client1.png",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Wade Warren",
+    mentions: "@wadewarren",
+    review:
+      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+    imgPath: "/images/client3.png",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Guy Hawkins",
+    mentions: "@guyhawkins",
+    review:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    imgPath: "/images/client2.png",
   },
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Marvin McKinney",
+    mentions: "@marvinmckinney",
+    review:
+      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
+    imgPath: "/images/client5.png",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Floyd Miles",
+    mentions: "@floydmiles",
+    review:
+      "Adrian's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He's a true professional!",
+    imgPath: "/images/client4.png",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Albert Flores",
+    mentions: "@albertflores",
+    review:
+      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+    imgPath: "/images/client6.png",
   },
 ];
 
-const projects: Project[] = [
+const socialImgs: SocialImg[] = [
   {
-    name: "Weather App",
-    description: "A weather forecast site using the open map weather API.",
-    tags: [
-      {
-        name: "promises",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html-css-js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "async await",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: weather,
-    source_code_link: "https://github.com/weather-app",
+    name: "insta",
+    imgPath: "/images/insta.png",
   },
   {
-    name: "Battleship",
-    description:
-      "Battleship is a classic two-player guessing game where each player attempts to sink the other player's fleet of ships by guessing the coordinates of the ships on a grid.",
-    tags: [
-      {
-        name: "tdd",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "jest-test",
-        color: "green-text-gradient",
-      },
-      {
-        name: "html-css-js",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: battleship,
-    source_code_link: "https://github.com/battleship",
+    name: "fb",
+    imgPath: "/images/fb.png",
   },
   {
-    name: "Shopping Cart",
-    description:
-      "Shopping Cart is a classic React project that allows users to browse and purchase products using a simulated shopping cart.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "api",
-        color: "green-text-gradient",
-      },
-      {
-        name: "state management",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: shoppingcart,
-    source_code_link: "https://github.com/shopping-cart",
+    name: "x",
+    imgPath: "/images/x.png",
+  },
+  {
+    name: "linkedin",
+    imgPath: "/images/linkedin.png",
   },
 ];
 
-const socials: Social[] = [
-  {
-    name: "GitHub",
-
-    url: "https://github.com/odilson-dev",
-  },
-  {
-    name: "Twitter",
-
-    url: "https://twitter.com/odilsondev",
-  },
-  {
-    name: "LinkedIn",
-
-    url: "https://linkedin.com/in/odilson-dev",
-  },
-  // {
-  //   name: "Instagram",
-
-  //   url: "https://instagram.com/odilson.dev",
-  // },
-  // {
-  //   name: "Facebook",
-  //   url: "https://facebook.com/odilson-dev",
-  // },
-];
-
-// Export the constants
 export {
-  experiences,
+  abilities,
+  counterItems,
+  expCards,
+  expLogos,
+  logoIconsList,
   navLinks,
-  projects,
-  services,
-  socials,
-  technologies,
+  socialImgs,
+  techStackIcons,
+  techStackImgs,
   testimonials,
+  words,
 };

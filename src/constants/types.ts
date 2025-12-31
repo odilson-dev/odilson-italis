@@ -99,3 +99,16 @@ export interface SocialLink {
   icon: React.ComponentType<{ className?: string }>;
   url: string;
 }
+
+/**
+ * Project showcase item with links
+ */
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  imgPath: string;
+  bgColor?: string;
+  githubUrl: string;
+  liveUrl: string;
+}

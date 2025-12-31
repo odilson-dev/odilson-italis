@@ -6,6 +6,7 @@ import type {
   ExpLogo,
   LogoIcon,
   NavLink,
+  Project,
   SocialLink,
   TechStackIcon,
   TechStackImg,
@@ -19,7 +20,7 @@ const navLinks: NavLink[] = [
     link: "#about",
   },
   {
-    name: "Work",
+    name: "Works",
     link: "#work",
   },
   {
@@ -266,6 +267,38 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const projects: Project[] = [
+  {
+    id: "ryde",
+    title:
+      "On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde",
+    description:
+      "An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.",
+    imgPath: "/images/project1.png",
+    githubUrl: "https://github.com/odilson-dev/ryde-app",
+    liveUrl: "https://ryde-demo.com",
+  },
+  {
+    id: "library",
+    title: "The Library Management Platform",
+    description:
+      "A comprehensive library management system built with modern web technologies.",
+    imgPath: "/images/project2.png",
+    bgColor: "#FFEFDB",
+    githubUrl: "https://github.com/odilson-dev/library-platform",
+    liveUrl: "https://library-demo.com",
+  },
+  {
+    id: "yc-directory",
+    title: "YC Directory - A Startup Showcase App",
+    description: "A platform to discover and showcase innovative startups.",
+    imgPath: "/images/project3.png",
+    bgColor: "#FFE7EB",
+    githubUrl: "https://github.com/odilson-dev/yc-directory",
+    liveUrl: "https://yc-directory-demo.com",
+  },
+];
+
 const socialImgs: SocialLink[] = [
   {
     name: "github",
@@ -291,6 +324,7 @@ export {
   expLogos,
   logoIconsList,
   navLinks,
+  projects,
   socialImgs,
   techStackIcons,
   techStackImgs,

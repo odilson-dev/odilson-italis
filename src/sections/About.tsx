@@ -42,7 +42,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent rounded-2xl z-10" />
               <img
-                src="/images/profile.png"
+                src="/images/shooting-1.jpg"
                 alt="Odilson Profile"
                 className="rounded-2xl shadow-lg w-full max-w-md object-cover border border-white/10"
               />

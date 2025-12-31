@@ -92,9 +92,10 @@ export interface Testimonial {
 }
 
 /**
- * Social media image/icon
+ * Social media link with Lucide icon
  */
-export interface SocialImg {
+export interface SocialLink {
   name: string;
-  imgPath: string;
+  icon: React.ComponentType<{ className?: string }>;
+  url: string;
 }

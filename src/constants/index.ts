@@ -1,3 +1,4 @@
+import { Github, Linkedin, Twitter } from "lucide-react";
 import type {
   Ability,
   CounterItem,
@@ -5,7 +6,7 @@ import type {
   ExpLogo,
   LogoIcon,
   NavLink,
-  SocialImg,
+  SocialLink,
   TechStackIcon,
   TechStackImg,
   Testimonial,
@@ -261,22 +262,21 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-const socialImgs: SocialImg[] = [
+const socialImgs: SocialLink[] = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
+    name: "github",
+    icon: Github,
+    url: "https://github.com/odilson-dev",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "twitter",
+    icon: Twitter,
+    url: "https://twitter.com/odilsonDev",
   },
   {
     name: "linkedin",
-    imgPath: "/images/linkedin.png",
+    icon: Linkedin,
+    url: "https://linkedin.com/in/odilson-dev",
   },
 ];
 

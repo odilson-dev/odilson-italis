@@ -49,6 +49,7 @@ export interface Ability {
 export interface TechStackImg {
   name: string;
   imgPath: string;
+  level?: number;
 }
 
 /**

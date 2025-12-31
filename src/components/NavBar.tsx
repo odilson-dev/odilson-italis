@@ -1,3 +1,4 @@
+import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { navLinks } from "../constants";
@@ -50,11 +51,22 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Hire me</span>
-          </div>
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="/resume.pdf"
+            download
+            className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors duration-300"
+          >
+            <Download className="w-4 h-4" />
+            <span className="text-sm font-medium">Resume</span>
+          </a>
+
+          <a href="#contact" className="contact-btn group">
+            <div className="inner">
+              <span>Hire me</span>
+            </div>
+          </a>
+        </div>
       </div>
     </header>
   );

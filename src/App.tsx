@@ -1,4 +1,5 @@
 import AnimatedCounter from "./components/AnimatedCounter";
+import LogoShowcase from "./components/LogoShowCase";
 import NavBar from "./components/NavBar";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
@@ -19,7 +20,7 @@ function App() {
 
       <AppShowcase />
       {/* Display company Logo I already collaborate with */}
-      {/* <LogoShowcase /> */}
+      <LogoShowcase />
       <FeatureCards />
       <Experience />
       <TechStack />

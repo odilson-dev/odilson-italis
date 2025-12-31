@@ -1,0 +1,41 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Odilson Italis",
+  "url": "https://odilsonitalis.com",
+  "image": "https://odilsonitalis.com/images/profile.png",
+  "sameAs": [
+    "https://github.com/odilson-dev",
+    "https://twitter.com/odilsonDev",
+    "https://linkedin.com/in/odilson-dev"
+  ],
+  "jobTitle": "Full Stack Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "CreaticsHub"
+  },
+  "description": "Full Stack Developer specializing in React, Next.js, Node.js, and React Native. Building exceptional web and mobile applications that turn visitors into customers.",
+  "knowsAbout": [
+    "React",
+    "Next.js",
+    "Node.js",
+    "React Native",
+    "TypeScript",
+    "JavaScript",
+    "Three.js",
+    "GSAP",
+    "TailwindCSS",
+    "Web Development",
+    "Mobile Development",
+    "Frontend Development",
+    "Backend Development"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Your University/School"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  }
+}

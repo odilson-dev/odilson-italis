@@ -70,6 +70,14 @@ const About = () => {
               the community. I believe in the power of code to make a positive
               impact on the world.
             </p>
+            <div className="about-text mt-4">
+              <a
+                href="#work"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300"
+              >
+                View My Work
+              </a>
+            </div>
           </div>
         </div>
       </div>

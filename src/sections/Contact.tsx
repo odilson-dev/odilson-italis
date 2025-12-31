@@ -114,8 +114,12 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
-                  <div className="cta-button group">
+                <button type="submit" disabled={loading}>
+                  <div
+                    className={`cta-button group ${
+                      loading ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                  >
                     <div className="bg-circle" />
                     <p className="text">
                       {loading ? "Sending..." : "Send Message"}

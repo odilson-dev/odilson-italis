@@ -112,4 +112,28 @@ export interface Project {
   bgColor?: string;
   githubUrl: string;
   liveUrl: string;
+  stars?: number;
+  forks?: number;
+}
+
+/**
+ * Certification or course item
+ */
+export interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  link?: string;
+  imgPath?: string;
+}
+
+/**
+ * Tech community involvement item
+ */
+export interface CommunityLink {
+  name: string;
+  platform: string;
+  url: string;
+  stats?: string;
+  icon: React.ComponentType<{ className?: string }>;
 }

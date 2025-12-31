@@ -1,6 +1,7 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
 import type {
   Ability,
+  Certification,
   CounterItem,
   ExpCard,
   ExpLogo,
@@ -34,6 +35,10 @@ const navLinks: NavLink[] = [
   {
     name: "Testimonials",
     link: "#testimonials",
+  },
+  {
+    name: "Certifications",
+    link: "#certifications",
   },
 ];
 
@@ -282,6 +287,8 @@ const projects: Project[] = [
     imgPath: "/images/project1.png",
     githubUrl: "https://github.com/odilson-dev/ryde-app",
     liveUrl: "https://ryde-demo.com",
+    stars: 128,
+    forks: 45,
   },
   {
     id: "library",
@@ -292,6 +299,8 @@ const projects: Project[] = [
     bgColor: "#FFEFDB",
     githubUrl: "https://github.com/odilson-dev/library-platform",
     liveUrl: "https://library-demo.com",
+    stars: 85,
+    forks: 22,
   },
   {
     id: "yc-directory",
@@ -301,6 +310,32 @@ const projects: Project[] = [
     bgColor: "#FFE7EB",
     githubUrl: "https://github.com/odilson-dev/yc-directory",
     liveUrl: "https://yc-directory-demo.com",
+    stars: 210,
+    forks: 64,
+  },
+];
+
+const certifications: Certification[] = [
+  {
+    title: "Full Stack Web Development",
+    issuer: "FreeCodeCamp",
+    date: "2023",
+    link: "https://freecodecamp.org/certification/odilson/full-stack",
+    imgPath: "/images/cert1.png",
+  },
+  {
+    title: "React Native Specialist",
+    issuer: "Meta",
+    date: "2024",
+    link: "https://coursera.org/verify/react-native-specialist",
+    imgPath: "/images/cert2.png",
+  },
+  {
+    title: "Advanced TypeScript",
+    issuer: "Frontend Masters",
+    date: "2024",
+    link: "https://frontendmasters.com/certificates/typescript",
+    imgPath: "/images/cert3.png",
   },
 ];
 
@@ -324,6 +359,7 @@ const socialImgs: SocialLink[] = [
 
 export {
   abilities,
+  certifications,
   counterItems,
   expCards,
   expLogos,

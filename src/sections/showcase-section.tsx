@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, GitFork, Github, Star } from "lucide-react";
 import { useRef, useState } from "react";
 import { projects } from "../constants";
 
@@ -98,6 +98,16 @@ const AppShowcase = () => {
               <p className="text-white-50 md:text-xl">
                 {projects[0].description}
               </p>
+              <div className="flex items-center gap-4 mt-2">
+                <div className="flex items-center gap-1 text-white-50 text-sm">
+                  <Star className="w-4 h-4 text-yellow-500" />
+                  <span>{projects[0].stars}</span>
+                </div>
+                <div className="flex items-center gap-1 text-white-50 text-sm">
+                  <GitFork className="w-4 h-4 text-blue-400" />
+                  <span>{projects[0].forks}</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -115,6 +125,16 @@ const AppShowcase = () => {
                 {renderProjectButtons("library")}
               </div>
               <h2>{projects[1].title}</h2>
+              <div className="flex items-center gap-4 mt-1">
+                <div className="flex items-center gap-1 text-white-50 text-xs">
+                  <Star className="w-3 h-3 text-yellow-500" />
+                  <span>{projects[1].stars}</span>
+                </div>
+                <div className="flex items-center gap-1 text-white-50 text-xs">
+                  <GitFork className="w-3 h-3 text-blue-400" />
+                  <span>{projects[1].forks}</span>
+                </div>
+              </div>
             </div>
 
             <div
@@ -130,6 +150,16 @@ const AppShowcase = () => {
                 {renderProjectButtons("yc-directory")}
               </div>
               <h2>{projects[2].title}</h2>
+              <div className="flex items-center gap-4 mt-1">
+                <div className="flex items-center gap-1 text-white-50 text-xs">
+                  <Star className="w-3 h-3 text-yellow-500" />
+                  <span>{projects[2].stars}</span>
+                </div>
+                <div className="flex items-center gap-1 text-white-50 text-xs">
+                  <GitFork className="w-3 h-3 text-blue-400" />
+                  <span>{projects[2].forks}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
+import AnimatedCounter from "./components/AnimatedCounter";
 import NavBar from "./components/NavBar";
+import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Experience from "./sections/experience";
 import FeatureCards from "./sections/FeatureCard";
@@ -12,6 +14,9 @@ function App() {
     <>
       <NavBar />
       <Hero />
+      <About />
+      <AnimatedCounter />
+
       <AppShowcase />
       {/* Display company Logo I already collaborate with */}
       {/* <LogoShowcase /> */}

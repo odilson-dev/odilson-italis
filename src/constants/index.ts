@@ -36,10 +36,6 @@ const navLinks: NavLink[] = [
     name: "Testimonials",
     link: "#testimonials",
   },
-  {
-    name: "Certifications",
-    link: "#certifications",
-  },
 ];
 
 const words: Word[] = [
@@ -189,32 +185,32 @@ const expCards: ExpCard[] = [
       "Optimized web applications for maximum speed and scalability.",
     ],
   },
-  {
-    review:
-      "Odilson's contributions to the web applications have been outstanding. He approaches challenges with a problem-solving mindset and delivers high-quality code.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2022 - October 2024",
-    responsibilities: [
-      "Led the development of scalable web applications using React and Node.js.",
-      "Implemented robust backend APIs and integrated them with modern frontend frameworks.",
-      "Optimized database queries and improved overall application performance.",
-    ],
-  },
-  {
-    review:
-      "Odilson's work on the mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience and met our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2020 - May 2022",
-    responsibilities: [
-      "Built cross-platform mobile applications using React Native and Expo.",
-      "Integrated third-party services and APIs to enhance app functionality.",
-      "Collaborated with the design team to implement pixel-perfect user interfaces.",
-    ],
-  },
+  // {
+  //   review:
+  //     "Odilson's contributions to the web applications have been outstanding. He approaches challenges with a problem-solving mindset and delivers high-quality code.",
+  //   imgPath: "/images/exp2.png",
+  //   logoPath: "/images/logo2.png",
+  //   title: "Full Stack Developer",
+  //   date: "June 2022 - October 2024",
+  //   responsibilities: [
+  //     "Led the development of scalable web applications using React and Node.js.",
+  //     "Implemented robust backend APIs and integrated them with modern frontend frameworks.",
+  //     "Optimized database queries and improved overall application performance.",
+  //   ],
+  // },
+  // {
+  //   review:
+  //     "Odilson's work on the mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience and met our product goals.",
+  //   imgPath: "/images/exp3.png",
+  //   logoPath: "/images/logo3.png",
+  //   title: "React Native Developer",
+  //   date: "March 2020 - May 2022",
+  //   responsibilities: [
+  //     "Built cross-platform mobile applications using React Native and Expo.",
+  //     "Integrated third-party services and APIs to enhance app functionality.",
+  //     "Collaborated with the design team to implement pixel-perfect user interfaces.",
+  //   ],
+  // },
 ];
 
 const expLogos: ExpLogo[] = [

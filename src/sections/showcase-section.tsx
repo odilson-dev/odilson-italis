@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ExternalLink, GitFork, Github, Star } from "lucide-react";
 import { useRef, useState } from "react";
+import TitleHeader from "../components/TitleHeader";
 import { projects } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -84,7 +85,8 @@ const AppShowcase = () => {
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        <div className="showcaselayout">
+        <TitleHeader title="Featured Projects" sub="🚀 My Work" />
+        <div className="showcaselayout mt-12">
           <div ref={rydeRef} className="first-project-wrapper">
             <div
               className="image-wrapper cursor-pointer"

@@ -39,22 +39,28 @@ const Community = () => {
 
         <div className="mt-16 space-y-12">
           {/* GitHub Contribution Graph */}
-          <div className="github-graph card-border rounded-2xl p-6 md:p-10 bg-black-100/50 backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              <img src="/images/code.svg" className="w-6 h-6" alt="" />
-              GitHub Activity
-            </h3>
-            <div className="overflow-x-auto">
-              <img
-                src="https://ghchart.rshah.org/odilson-dev"
-                alt="Odilson's GitHub Contributions"
-                className="w-full min-w-[700px] invert opacity-80 hover:opacity-100 transition-opacity duration-300"
-              />
+          <a
+            href="http://github.com/odilson-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="github-graph card-border rounded-2xl p-6 md:p-10 bg-black-100/50 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <img src="/images/code.svg" className="w-6 h-6" alt="" />
+                GitHub Activity
+              </h3>
+              <div className="overflow-x-auto">
+                <img
+                  src="https://ghchart.rshah.org/odilson-dev"
+                  alt="Odilson's GitHub Contributions"
+                  className="w-full min-w-[700px] invert opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <p className="text-white-50 text-sm mt-4 text-center">
+                My open-source contributions over the last year.
+              </p>
             </div>
-            <p className="text-white-50 text-sm mt-4 text-center">
-              My open-source contributions over the last year.
-            </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

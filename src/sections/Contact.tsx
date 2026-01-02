@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 
 import { toast } from "sonner";
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
 const Contact = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -20,7 +19,7 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setLoading(true);
@@ -115,8 +114,12 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
-                  <div className="cta-button group">
+                <button type="submit" disabled={loading}>
+                  <div
+                    className={`cta-button group ${
+                      loading ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                  >
                     <div className="bg-circle" />
                     <p className="text">
                       {loading ? "Sending..." : "Send Message"}
@@ -129,9 +132,13 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+          <div className="xl:col-span-7 min-h-96 flex justify-center items-center">
+            <div className="w-[80%] h-[80%]  hover:cursor-grab rounded-3xl overflow-hidden">
+              <img
+                className="block"
+                src="/images/shooting-2.png"
+                alt="shooting-2 "
+              />
             </div>
           </div>
         </div>

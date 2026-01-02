@@ -49,6 +49,7 @@ export interface Ability {
 export interface TechStackImg {
   name: string;
   imgPath: string;
+  level?: number;
 }
 
 /**
@@ -92,9 +93,47 @@ export interface Testimonial {
 }
 
 /**
- * Social media image/icon
+ * Social media link with Lucide icon
  */
-export interface SocialImg {
+export interface SocialLink {
   name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  url: string;
+}
+
+/**
+ * Project showcase item with links
+ */
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
   imgPath: string;
+  bgColor?: string;
+  githubUrl: string;
+  liveUrl: string;
+  stars?: number;
+  forks?: number;
+}
+
+/**
+ * Certification or course item
+ */
+export interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  link?: string;
+  imgPath?: string;
+}
+
+/**
+ * Tech community involvement item
+ */
+export interface CommunityLink {
+  name: string;
+  platform: string;
+  url: string;
+  stats?: string;
+  icon: React.ComponentType<{ className?: string }>;
 }

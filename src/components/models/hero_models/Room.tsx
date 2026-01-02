@@ -8,7 +8,7 @@ import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import { useMemo, useRef, type JSX } from "react";
 import * as THREE from "three";
-import { GLTF } from "three-stdlib";
+import type { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -55,8 +55,8 @@ type GLTFResult = GLTF & {
 export function Room(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF(
     "/models/optimized-room.glb"
-  ) as GLTFResult;
-  const screensRef = useRef<THREE.Mesh>(null);
+  ) as unknown as GLTFResult;
+  const screensRef = useRef<THREE.Mesh>(null!);
   const matcapTexture = useTexture("/images/textures/mat1.png");
 
   const curtainMaterial = useMemo(

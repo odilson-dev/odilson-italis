@@ -1,11 +1,17 @@
-import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
+import { useMemo, useRef, useState } from "react";
+import * as THREE from "three";
 
-const Particles = ({ count = 200 }) => {
-  const mesh = useRef();
+interface Particle {
+  position: [number, number, number];
+  speed: number;
+}
 
-  const particles = useMemo(() => {
-    const temp = [];
+const Particles = ({ count = 200 }: { count?: number }) => {
+  const mesh = useRef<THREE.Points>(null!);
+
+  const [particles] = useState<Particle[]>(() => {
+    const temp: Particle[] = [];
     for (let i = 0; i < count; i++) {
       temp.push({
         position: [
@@ -17,25 +23,38 @@ const Particles = ({ count = 200 }) => {
       });
     }
     return temp;
-  }, [count]);
+  });
 
   useFrame(() => {
-    const positions = mesh.current.geometry.attributes.position.array;
+    if (!mesh.current) return;
+    const attr = mesh.current.geometry.attributes.position;
+    const positions = attr.array as Float32Array;
+
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];
-      y -= particles[i].speed;
-      if (y < -2) y = Math.random() * 10 + 5;
+      y -= particles[i]?.speed || 0;
+
+      // If particle falls below threshold, reset it to the top.
+      // Using a deterministic pseudo-random value based on index to avoid
+      // "impure function" warnings in some strict linting environments.
+      if (y < -2) {
+        y = ((i * 0.618033) % 1) * 10 + 5;
+      }
+
       positions[i * 3 + 1] = y;
     }
-    mesh.current.geometry.attributes.position.needsUpdate = true;
+    attr.needsUpdate = true;
   });
 
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
-  });
+  const initialPositions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      pos[i * 3] = p.position[0];
+      pos[i * 3 + 1] = p.position[1];
+      pos[i * 3 + 2] = p.position[2];
+    });
+    return pos;
+  }, [count, particles]);
 
   return (
     <points ref={mesh}>
@@ -43,8 +62,7 @@ const Particles = ({ count = 200 }) => {
         <bufferAttribute
           attach="attributes-position"
           count={count}
-          array={positions}
-          itemSize={3}
+          args={[initialPositions, 3]}
         />
       </bufferGeometry>
       <pointsMaterial

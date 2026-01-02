@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# Odilson Italis - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance 3D portfolio website built with **React 19**, **Three.js**, and **GSAP**. This project showcases my work, skills, and experience as a Frontend and Full Stack Developer.
 
-Currently, two official plugins are available:
+![Portfolio Preview](/public/images/preview.png) _(Note: Replace with an actual preview image if available)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **3D Interactive Elements**: Implemented using `React Three Fiber` and `Drei` for a truly immersive experience.
+- **Smooth Animations**: Powered by `GSAP` for high-performance transitions and scroll-triggered effects.
+- **Responsive Design**: Built with `Tailwind CSS 4` to ensure a seamless experience across all devices.
+- **Dynamic Project Showcase**: Interactive section highlighting key projects with GitHub and Live demo links.
+- **Experience Timeline**: A detailed look at my professional journey and contributions.
+- **Tech Stack Visualization**: Interactive 3D models representing my core technical skills.
+- **Contact Form**: Fully functional contact section integrated with `EmailJS`.
+- **Testimonials**: Social proof from clients and collaborators.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **3D Graphics**: [Three.js](https://threejs.org/), [@react-three/fiber](https://github.com/pmndrs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei)
+- **Animations**: [GSAP](https://gsap.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Other Tools**: [EmailJS](https://www.emailjs.com/), [Sonner](https://sonner.emilkowal.ski/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── components/     # Reusable UI components (NavBar, AnimatedCounter, etc.)
+├── constants/      # Static data and configuration (projects, skills, etc.)
+├── sections/       # Main page sections (Hero, About, Experience, Showcase, etc.)
+├── assets/         # Images, 3D models, and other static assets
+├── App.tsx         # Main application entry point
+└── main.tsx        # React DOM rendering
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v18 or higher recommended)
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/odilson-dev/odilson-italis.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd odilson-italis
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
+
+```bash
+npm run dev
 ```
+
+### Build
+
+Create a production-ready build:
+
+```bash
+npm run build
+```
+
+## 📧 Contact
+
+Feel free to reach out if you'd like to collaborate or just say hi!
+
+- **GitHub**: [@odilson-dev](https://github.com/odilson-dev)
+- **LinkedIn**: [odilson-dev](https://linkedin.com/in/odilson-dev)
+- **Twitter**: [@odilsonDev](https://twitter.com/odilsonDev)
+
+---
+
+Built with ❤️ by [Odilson Italis](https://github.com/odilson-dev)

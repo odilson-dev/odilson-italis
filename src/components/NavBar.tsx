@@ -53,7 +53,8 @@ const NavBar = () => {
 
         <div className="flex items-center gap-4">
           <a
-            href="/resume.pdf"
+            href="https://rxresu.me/odilson-dev/odilson-italis-resume"
+            target="_blank"
             download
             className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors duration-300"
           >

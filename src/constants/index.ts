@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import type {
   Ability,
   Certification,
@@ -336,6 +336,11 @@ const certifications: Certification[] = [
 ];
 
 const socialImgs: SocialLink[] = [
+  {
+    name: "instagram",
+    icon: Instagram,
+    url: "https://instagram.com/odilson.dev",
+  },
   {
     name: "github",
     icon: Github,

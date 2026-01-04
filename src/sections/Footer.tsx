@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer py-12 border-t border-black-50 bg-linear-to-b from-transparent to-black-100/50">
+    <footer className="footer pt-11 border-t border-black-50 bg-linear-to-b from-transparent to-black-100/50">
       <div className="footer-container items-center">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2 justify-center md:justify-start">

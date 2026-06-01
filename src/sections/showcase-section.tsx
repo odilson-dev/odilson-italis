@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AppShowcase = () => {
   const sectionRef = useRef(null);
-  const rydeRef = useRef(null);
+  const rplaceConvexRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
 
@@ -25,7 +25,11 @@ const AppShowcase = () => {
     );
 
     // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
+    const cards = [
+      rplaceConvexRef.current,
+      libraryRef.current,
+      ycDirectoryRef.current,
+    ];
 
     cards.forEach((card, index) => {
       gsap.fromTo(
@@ -87,13 +91,13 @@ const AppShowcase = () => {
       <div className="w-full">
         <TitleHeader title="Featured Projects" sub="🚀 My Work" />
         <div className="showcaselayout mt-12">
-          <div ref={rydeRef} className="first-project-wrapper">
+          <div ref={rplaceConvexRef} className="first-project-wrapper">
             <div
               className="image-wrapper cursor-pointer"
-              onClick={() => handleProjectClick("ryde")}
+              onClick={() => handleProjectClick("rplace-convex")}
             >
               <img src={projects[0].imgPath} alt={projects[0].title} />
-              {renderProjectButtons("ryde")}
+              {renderProjectButtons("rplace-convex")}
             </div>
             <div className="text-content">
               <h2>{projects[0].title}</h2>

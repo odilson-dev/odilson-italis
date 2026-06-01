@@ -275,16 +275,15 @@ const testimonials: Testimonial[] = [
 
 const projects: Project[] = [
   {
-    id: "ryde",
-    title:
-      "On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde",
+    id: "rplace-convex",
+    title: "r/place × Convex — Real-Time Collaborative Pixel Canvas",
     description:
-      "An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.",
-    imgPath: "/images/project1.png",
-    githubUrl: "https://github.com/odilson-dev/ryde-app",
-    liveUrl: "https://ryde-demo.com",
-    stars: 128,
-    forks: 45,
+      "A multiplayer r/place-style canvas with instant sync powered by Convex—reactive queries, batched mutations, and optimistic UI on Next.js 16 & React 19.",
+    imgPath: "/images/project-rplace-convex.png",
+    githubUrl: "https://github.com/odilson-dev/rpkace-convex",
+    liveUrl: "https://rplace-convex-lime.vercel.app/",
+    stars: 0,
+    forks: 0,
   },
   {
     id: "library",

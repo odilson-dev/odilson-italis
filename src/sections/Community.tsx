@@ -29,11 +29,7 @@ const CommunityPhotoButton = ({
     className={`group relative block w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-xl ${className}`}
     aria-label={`View larger: ${photo.caption}`}
   >
-    <img
-      src={photo.src}
-      alt={photo.alt}
-      className={imageClassName}
-    />
+    <img src={photo.src} alt={photo.alt} className={imageClassName} />
     <span className="absolute inset-0 flex items-center justify-center rounded-xl bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
       <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
     </span>
@@ -56,8 +52,9 @@ const Community = () => {
       duration: 0.8,
       stagger: 0.2,
       scrollTrigger: {
-        trigger: "#community",
-        start: "top 80%",
+        trigger: ".community-card",
+        start: "top 85%",
+        once: true,
       },
     });
 
@@ -69,16 +66,18 @@ const Community = () => {
       scrollTrigger: {
         trigger: ".community-gallery",
         start: "top 85%",
+        once: true,
       },
     });
 
     gsap.from(".github-graph", {
       opacity: 0,
-      scale: 0.95,
-      duration: 1,
+      y: 20,
+      duration: 0.8,
       scrollTrigger: {
         trigger: ".github-graph",
-        start: "top 85%",
+        start: "top bottom",
+        once: true,
       },
     });
   }, []);
@@ -173,7 +172,7 @@ const Community = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {galleryPhotos.map((photo) => (
                   <figure key={photo.src} className="community-photo">
-                    <div className="overflow-hidden rounded-xl border border-white/10 aspect-[4/3]">
+                    <div className="overflow-hidden rounded-xl border border-white/10 aspect-4/3">
                       <CommunityPhotoButton
                         photo={photo}
                         index={getPhotoIndex(photo.src)}
@@ -196,7 +195,7 @@ const Community = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="github-graph community-card card-border rounded-2xl p-6 md:p-10 bg-black-100/50 backdrop-blur-sm">
+            <div className="github-graph card-border rounded-2xl p-6 md:p-10 bg-black-100/50 backdrop-blur-sm">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
                 <img src="/images/code.svg" className="w-6 h-6" alt="" />
                 GitHub Activity

@@ -58,7 +58,7 @@ const About = () => {
               {t.about.paragraphs[2]}{" "}
               <a
                 href="#community"
-                className="text-white underline underline-offset-2 hover:text-white-50 transition-colors"
+                className="text-white font-bold underline-offset-2 hover:text-white-50 transition-colors"
               >
                 {t.about.communityLink}
               </a>

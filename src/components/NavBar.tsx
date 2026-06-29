@@ -48,8 +48,6 @@ const NavBar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <LanguageToggle />
-
           <a
             href="https://rxresu.me/odilson-dev/odilson-italis-resume"
             target="_blank"
@@ -65,6 +63,7 @@ const NavBar = () => {
               <span>{t.nav.hireMe}</span>
             </div>
           </a>
+          <LanguageToggle />
         </div>
       </div>
     </header>

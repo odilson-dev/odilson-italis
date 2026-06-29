@@ -4,7 +4,7 @@ const wordCycle = (
   ideas: string,
   concepts: string,
   designs: string,
-  code: string
+  code: string,
 ) => [
   { text: ideas, imgPath: "/images/ideas.svg" },
   { text: concepts, imgPath: "/images/concepts.svg" },
@@ -23,7 +23,7 @@ export const fr: Translations = {
   nav: {
     role: "Développeur FullStack",
     resume: "CV",
-    hireMe: "Me contacter",
+    hireMe: "Embauchez-moi",
   },
   navLinks: [
     { name: "À propos", link: "#about" },

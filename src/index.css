@@ -39,6 +39,50 @@ section {
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-in-out;
   }
+
+  .testimonials-marquee-viewport {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+
+  .testimonial-marquee-track {
+    animation: testimonial-marquee-up 50s linear infinite;
+    will-change: transform;
+  }
+
+  .testimonial-marquee-track-down {
+    animation: testimonial-marquee-down 50s linear infinite;
+    will-change: transform;
+  }
+
+  @media (max-width: 640px) {
+    .testimonial-marquee-track {
+      animation-duration: 40s;
+    }
+
+    .testimonial-marquee-track-down {
+      animation-duration: 40s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-marquee-track,
+    .testimonial-marquee-track-down {
+      animation: none;
+    }
+  }
 }
 
 @keyframes fadeIn {
@@ -47,6 +91,24 @@ section {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes testimonial-marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes testimonial-marquee-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 

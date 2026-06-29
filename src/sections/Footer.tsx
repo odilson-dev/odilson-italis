@@ -1,7 +1,10 @@
 import { ArrowUp } from "lucide-react";
 import { socialImgs } from "../constants";
+import { useLocale } from "../i18n/LocaleContext";
 
 const Footer = () => {
+  const { t } = useLocale();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -21,7 +24,7 @@ const Footer = () => {
             </span>
           </div>
           <p className="text-xs text-white-50/50 text-center md:text-start">
-            © {new Date().getFullYear()} Odilson W. Italis. All rights reserved.
+            © {new Date().getFullYear()} Odilson W. Italis. {t.footer.rights}
           </p>
         </div>
 
@@ -45,13 +48,13 @@ const Footer = () => {
 
         <div className="flex items-center justify-center md:justify-end gap-6">
           <p className="text-sm text-white-50/60">
-            Made with <span className="text-red-500 animate-pulse">❤️</span> by
-            Odilson
+            {t.footer.madeWith}{" "}
+            <span className="text-red-500 animate-pulse">❤️</span> by Odilson
           </p>
           <button
             onClick={scrollToTop}
             className="p-2.5 rounded-full border border-black-50 bg-black-100 hover:bg-black-50 transition-all duration-300 group cursor-pointer"
-            aria-label="Back to top"
+            aria-label={t.footer.backToTop}
           >
             <ArrowUp className="w-4 h-4 text-white-50 group-hover:text-white transition-colors" />
           </button>

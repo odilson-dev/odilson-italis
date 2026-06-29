@@ -5,8 +5,8 @@ import { ExternalLink, MapPin, ZoomIn } from "lucide-react";
 import { useState } from "react";
 import ImageLightbox from "../components/ImageLightbox";
 import TitleHeader from "../components/TitleHeader";
-import { codingClubCayes } from "../constants";
 import type { CommunityPhoto } from "../constants/types";
+import { useLocale } from "../i18n/LocaleContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,12 +14,14 @@ const CommunityPhotoButton = ({
   photo,
   index,
   onOpen,
+  viewLargerLabel,
   className = "",
   imageClassName = "",
 }: {
   photo: CommunityPhoto;
   index: number;
   onOpen: (index: number) => void;
+  viewLargerLabel: string;
   className?: string;
   imageClassName?: string;
 }) => (
@@ -27,7 +29,7 @@ const CommunityPhotoButton = ({
     type="button"
     onClick={() => onOpen(index)}
     className={`group relative block w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-xl ${className}`}
-    aria-label={`View larger: ${photo.caption}`}
+    aria-label={`${viewLargerLabel}: ${photo.caption}`}
   >
     <img src={photo.src} alt={photo.alt} className={imageClassName} />
     <span className="absolute inset-0 flex items-center justify-center rounded-xl bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
@@ -37,6 +39,8 @@ const CommunityPhotoButton = ({
 );
 
 const Community = () => {
+  const { t } = useLocale();
+  const codingClubCayes = t.community.highlight;
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const allPhotos = codingClubCayes.photos;
   const featuredPhoto = allPhotos.find((photo) => photo.featured);
@@ -92,17 +96,13 @@ const Community = () => {
       />
 
       <div className="container mx-auto px-5 md:px-20">
-        <TitleHeader
-          title="Community & Open Source"
-          sub="🌐 Tech Involvement & Activity"
-        />
+        <TitleHeader title={t.community.title} sub={t.community.sub} />
 
         <div className="mt-16 space-y-12">
-          {/* Coding Club Cayes */}
           <div className="community-card card-border rounded-2xl p-6 md:p-10 bg-black-100/50 backdrop-blur-sm">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-100/40 text-white-50 border border-white/10">
-                Member since {codingClubCayes.memberSince}
+                {t.community.memberSince} {codingClubCayes.memberSince}
               </span>
               <span className="flex items-center gap-1.5 text-sm text-white-50">
                 <MapPin className="w-4 h-4" />
@@ -119,7 +119,7 @@ const Community = () => {
                   {codingClubCayes.title}
                 </h3>
                 <p className="text-white-50 text-sm mb-6">
-                  A branch of{" "}
+                  {t.community.branchOf}{" "}
                   <a
                     href={codingClubCayes.organizationUrl}
                     target="_blank"
@@ -143,7 +143,7 @@ const Community = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300"
                 >
-                  Visit Coding Club Haïti
+                  {t.community.visitOrg}
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -155,6 +155,7 @@ const Community = () => {
                       photo={featuredPhoto}
                       index={getPhotoIndex(featuredPhoto.src)}
                       onOpen={setLightboxIndex}
+                      viewLargerLabel={t.community.viewLarger}
                       imageClassName="w-full h-auto object-cover"
                     />
                   </div>
@@ -167,7 +168,7 @@ const Community = () => {
 
             <div className="community-gallery mt-12">
               <h4 className="text-lg font-semibold mb-6">
-                Integration Ceremony
+                {t.community.integrationCeremony}
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {galleryPhotos.map((photo) => (
@@ -177,6 +178,7 @@ const Community = () => {
                         photo={photo}
                         index={getPhotoIndex(photo.src)}
                         onOpen={setLightboxIndex}
+                        viewLargerLabel={t.community.viewLarger}
                         imageClassName="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
@@ -189,7 +191,6 @@ const Community = () => {
             </div>
           </div>
 
-          {/* GitHub Contribution Graph */}
           <a
             href="http://github.com/odilson-dev"
             target="_blank"
@@ -198,7 +199,7 @@ const Community = () => {
             <div className="github-graph card-border rounded-2xl p-6 md:p-10 bg-black-100/50 backdrop-blur-sm">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
                 <img src="/images/code.svg" className="w-6 h-6" alt="" />
-                GitHub Activity
+                {t.community.githubActivity}
               </h3>
               <div className="overflow-x-auto">
                 <img
@@ -208,7 +209,7 @@ const Community = () => {
                 />
               </div>
               <p className="text-white-50 text-sm mt-4 text-center">
-                My open-source contributions over the last year.
+                {t.community.githubContributions}
               </p>
             </div>
           </a>

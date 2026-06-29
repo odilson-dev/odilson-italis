@@ -1,6 +1,8 @@
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useCallback, useEffect } from "react";
 
+import { useLocale } from "../i18n/LocaleContext";
+
 export interface LightboxPhoto {
   src: string;
   alt: string;
@@ -20,6 +22,7 @@ const ImageLightbox = ({
   onClose,
   onNavigate,
 }: ImageLightboxProps) => {
+  const { t } = useLocale();
   const isOpen = activeIndex !== null;
   const photo = activeIndex !== null ? photos[activeIndex] : null;
   const hasPrev = activeIndex !== null && activeIndex > 0;
@@ -63,20 +66,20 @@ const ImageLightbox = ({
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
       role="dialog"
       aria-modal="true"
-      aria-label="Image preview"
+      aria-label={t.lightbox.preview}
     >
       <button
         type="button"
         className="absolute inset-0 bg-black/90 backdrop-blur-sm"
         onClick={onClose}
-        aria-label="Close preview"
+        aria-label={t.lightbox.closePreview}
       />
 
       <button
         type="button"
         onClick={onClose}
         className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black-200/80 border border-white/10 text-white hover:bg-black-200 transition-colors"
-        aria-label="Close"
+        aria-label={t.lightbox.close}
       >
         <X className="w-6 h-6" />
       </button>
@@ -86,7 +89,7 @@ const ImageLightbox = ({
           type="button"
           onClick={goPrev}
           className="absolute left-2 md:left-6 z-10 p-2 rounded-full bg-black-200/80 border border-white/10 text-white hover:bg-black-200 transition-colors"
-          aria-label="Previous image"
+          aria-label={t.lightbox.previous}
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -97,7 +100,7 @@ const ImageLightbox = ({
           type="button"
           onClick={goNext}
           className="absolute right-2 md:right-6 z-10 p-2 rounded-full bg-black-200/80 border border-white/10 text-white hover:bg-black-200 transition-colors"
-          aria-label="Next image"
+          aria-label={t.lightbox.next}
         >
           <ChevronRight className="w-6 h-6" />
         </button>

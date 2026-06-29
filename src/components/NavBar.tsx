@@ -1,25 +1,21 @@
 import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { navLinks } from "../constants";
+import { useLocale } from "../i18n/LocaleContext";
+import LanguageToggle from "./LanguageToggle";
 
 const NavBar = () => {
-  // track if the user has scrolled down the page
+  const { t } = useLocale();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    // create an event listener for when the user scrolls
     const handleScroll = () => {
-      // check if the user has scrolled down at least 10px
-      // if so, set the state to true
       const isScrolled = window.scrollY > 10;
       setScrolled(isScrolled);
     };
 
-    // add the event listener to the window
     window.addEventListener("scroll", handleScroll);
 
-    // cleanup the event listener when the component is unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -34,14 +30,14 @@ const NavBar = () => {
           />
           <div className="flex flex-col">
             <span className="text-md font-semibold">Odilson Italis</span>
-            <span className="text-xs text-gray-400">FullStack Developer</span>
+            <span className="text-xs text-gray-400">{t.nav.role}</span>
           </div>
         </a>
 
         <nav className="desktop">
           <ul>
-            {navLinks.map(({ link, name }) => (
-              <li key={name} className="group">
+            {t.navLinks.map(({ link, name }) => (
+              <li key={link} className="group">
                 <a href={link}>
                   <span>{name}</span>
                   <span className="underline" />
@@ -52,6 +48,8 @@ const NavBar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
+          <LanguageToggle />
+
           <a
             href="https://rxresu.me/odilson-dev/odilson-italis-resume"
             target="_blank"
@@ -59,12 +57,12 @@ const NavBar = () => {
             className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors duration-300"
           >
             <Download className="w-4 h-4" />
-            <span className="text-sm font-medium">Resume</span>
+            <span className="text-sm font-medium">{t.nav.resume}</span>
           </a>
 
           <a href="#contact" className="contact-btn group">
             <div className="inner">
-              <span>Hire me</span>
+              <span>{t.nav.hireMe}</span>
             </div>
           </a>
         </div>

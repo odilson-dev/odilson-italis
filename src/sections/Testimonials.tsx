@@ -1,11 +1,11 @@
 import GlowCard from "../components/GlowCard";
 import TitleHeader from "../components/TitleHeader";
-import { testimonials } from "../constants";
+import { useLocale } from "../i18n/LocaleContext";
 import type { Testimonial } from "../constants/types";
 
 const splitIntoColumns = (items: Testimonial[], count: number) =>
   Array.from({ length: count }, (_, column) =>
-    items.filter((_, index) => index % count === column),
+    items.filter((_, index) => index % count === column)
   );
 
 const TestimonialCard = ({
@@ -65,6 +65,8 @@ const MarqueeColumn = ({
 };
 
 const Testimonials = () => {
+  const { t } = useLocale();
+  const testimonials = t.testimonials.items;
   const columns2 = splitIntoColumns(testimonials, 2);
   const columns3 = splitIntoColumns(testimonials, 3);
 
@@ -72,13 +74,12 @@ const Testimonials = () => {
     <section id="testimonials" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="What People Say About Me?"
-          sub="⭐️ Customer feedback highlights"
+          title={t.testimonials.title}
+          sub={t.testimonials.sub}
         />
 
         <div className="mt-10 sm:mt-16">
           <div className="testimonials-marquee-viewport h-[clamp(420px,62vh,760px)] overflow-hidden">
-            {/* Mobile: single column scrolling up */}
             <div className="h-full md:hidden">
               <MarqueeColumn
                 items={testimonials}
@@ -87,7 +88,6 @@ const Testimonials = () => {
               />
             </div>
 
-            {/* Tablet: two columns — left up, right down */}
             <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-5 h-full">
               <MarqueeColumn
                 items={columns2[0]}
@@ -101,7 +101,6 @@ const Testimonials = () => {
               />
             </div>
 
-            {/* Desktop: three columns */}
             <div className="hidden lg:grid lg:grid-cols-3 gap-6 h-full">
               <MarqueeColumn
                 items={columns3[0]}

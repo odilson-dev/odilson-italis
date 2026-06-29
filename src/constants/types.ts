@@ -137,3 +137,28 @@ export interface CommunityLink {
   stats?: string;
   icon: React.ComponentType<{ className?: string }>;
 }
+
+/**
+ * Photo from a community event or involvement
+ */
+export interface CommunityPhoto {
+  src: string;
+  alt: string;
+  caption: string;
+  featured?: boolean;
+}
+
+/**
+ * Highlighted community involvement (clubs, events, etc.)
+ */
+export interface CommunityHighlight {
+  id: string;
+  title: string;
+  subtitle: string;
+  organization: string;
+  organizationUrl: string;
+  memberSince: string;
+  location: string;
+  description: string[];
+  photos: CommunityPhoto[];
+}

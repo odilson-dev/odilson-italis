@@ -2,6 +2,7 @@ import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import type {
   Ability,
   Certification,
+  CommunityHighlight,
   CounterItem,
   ExpCard,
   ExpLogo,
@@ -35,6 +36,10 @@ const navLinks: NavLink[] = [
   {
     name: "Testimonials",
     link: "#testimonials",
+  },
+  {
+    name: "Community",
+    link: "#community",
   },
 ];
 
@@ -334,6 +339,49 @@ const certifications: Certification[] = [
   },
 ];
 
+const codingClubCayes: CommunityHighlight = {
+  id: "coding-club-cayes",
+  title: "Coding Club Cayes",
+  subtitle: "Integration Ceremony · Les Cayes, Haiti",
+  organization: "Coding Club Haïti",
+  organizationUrl: "https://codingclubhaiti.com",
+  memberSince: "June 27, 2026",
+  location: "Les Cayes, Sud, Haiti",
+  description: [
+    "In June 2026, I was officially integrated as a member of Coding Club Cayes — the newest branch of Coding Club Haïti in the south of the country. The integration ceremony brought together passionate young developers united by a shared mission: learn, create, innovate, and impact.",
+    "Coding Club Haïti is a national nonprofit community launched in 2022 to democratize digital skills across Haiti. With hubs in Carrefour, Cap-Haïtien, and now Les Cayes, the movement trains the next generation of Haitian developers through workshops, hackathons, and inclusive programs like NUMECO and Women TechUp.",
+    "Being part of Coding Club Cayes means contributing to a local tech ecosystem from the ground up — collaborating with fellow members, growing as a developer, and helping expand access to technology in the southern region of Haiti.",
+  ],
+  photos: [
+    {
+      src: "/images/coding-club-cayes/certificate.png",
+      alt: "Certificate of membership for Italis Odilson Woody — Coding Club Cayes",
+      caption: "My official membership certificate",
+      featured: true,
+    },
+    {
+      src: "/images/coding-club-cayes/group-on-stage.png",
+      alt: "Coding Club Cayes members on stage during the integration ceremony",
+      caption: "Members on stage at the ceremony",
+    },
+    {
+      src: "/images/coding-club-cayes/banner.png",
+      alt: "Coding Club Haïti banner — Apprendre, Créer, Innover, Impacter",
+      caption: "Coding Club Haïti — Learn, Create, Innovate, Impact",
+    },
+    {
+      src: "/images/coding-club-cayes/certificate-presentation.png",
+      alt: "Presentation of membership certificates during the integration ceremony",
+      caption: "Certificate presentation moment",
+    },
+    {
+      src: "/images/coding-club-cayes/audience-listening.png",
+      alt: "Coding Club Cayes members attending the integration ceremony",
+      caption: "Members at the integration ceremony",
+    },
+  ],
+};
+
 const socialImgs: SocialLink[] = [
   {
     name: "instagram",
@@ -360,6 +408,7 @@ const socialImgs: SocialLink[] = [
 export {
   abilities,
   certifications,
+  codingClubCayes,
   counterItems,
   expCards,
   expLogos,

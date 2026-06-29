@@ -67,8 +67,14 @@ const About = () => {
             <p className="about-text">
               When I'm not coding, you can find me exploring new technologies,
               contributing to open-source projects, or sharing my knowledge with
-              the community. I believe in the power of code to make a positive
-              impact on the world.
+              the community. I'm also a member of{" "}
+              <a
+                href="#community"
+                className="text-white underline underline-offset-2 hover:text-white-50 transition-colors"
+              >
+                Coding Club Cayes
+              </a>
+              , helping grow Haiti's tech ecosystem in the south.
             </p>
             <div className="about-text mt-4">
               <a

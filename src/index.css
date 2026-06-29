@@ -67,6 +67,10 @@ section {
     will-change: transform;
   }
 
+  .testimonial-marquee-track-paused {
+    animation-play-state: paused;
+  }
+
   @media (max-width: 640px) {
     .testimonial-marquee-track {
       animation-duration: 40s;

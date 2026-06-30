@@ -4,11 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ExternalLink, GitFork, Github, Star } from "lucide-react";
 import { useRef, useState } from "react";
 import TitleHeader from "../components/TitleHeader";
-import { projects } from "../constants";
+import { useLocale } from "../i18n/LocaleContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AppShowcase = () => {
+  const { t } = useLocale();
   const sectionRef = useRef(null);
   const rplaceConvexRef = useRef(null);
   const libraryRef = useRef(null);
@@ -17,14 +18,12 @@ const AppShowcase = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   useGSAP(() => {
-    // Animation for the main section
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 1.5 }
     );
 
-    // Animations for each app showcase
     const cards = [
       rplaceConvexRef.current,
       libraryRef.current,
@@ -57,7 +56,7 @@ const AppShowcase = () => {
   };
 
   const renderProjectButtons = (projectId: string) => {
-    const project = projects.find((p) => p.id === projectId);
+    const project = t.projects.find((p) => p.id === projectId);
     if (!project || selectedProject !== projectId) return null;
 
     return (
@@ -70,7 +69,7 @@ const AppShowcase = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <Github className="w-5 h-5" />
-          GitHub
+          {t.showcase.github}
         </a>
         <a
           href={project.liveUrl}
@@ -80,38 +79,38 @@ const AppShowcase = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <ExternalLink className="w-5 h-5" />
-          Live View
+          {t.showcase.liveView}
         </a>
       </div>
     );
   };
 
+  const [first, second, third] = t.projects;
+
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        <TitleHeader title="Featured Projects" sub="🚀 My Work" />
+        <TitleHeader title={t.showcase.title} sub={t.showcase.sub} />
         <div className="showcaselayout mt-12">
           <div ref={rplaceConvexRef} className="first-project-wrapper">
             <div
               className="image-wrapper cursor-pointer"
               onClick={() => handleProjectClick("rplace-convex")}
             >
-              <img src={projects[0].imgPath} alt={projects[0].title} />
+              <img src={first.imgPath} alt={first.title} />
               {renderProjectButtons("rplace-convex")}
             </div>
             <div className="text-content">
-              <h2>{projects[0].title}</h2>
-              <p className="text-white-50 md:text-xl">
-                {projects[0].description}
-              </p>
+              <h2>{first.title}</h2>
+              <p className="text-white-50 md:text-xl">{first.description}</p>
               <div className="flex items-center gap-4 mt-2">
                 <div className="flex items-center gap-1 text-white-50 text-sm">
                   <Star className="w-4 h-4 text-yellow-500" />
-                  <span>{projects[0].stars}</span>
+                  <span>{first.stars}</span>
                 </div>
                 <div className="flex items-center gap-1 text-white-50 text-sm">
                   <GitFork className="w-4 h-4 text-blue-400" />
-                  <span>{projects[0].forks}</span>
+                  <span>{first.forks}</span>
                 </div>
               </div>
             </div>
@@ -125,20 +124,20 @@ const AppShowcase = () => {
             >
               <div
                 className="image-wrapper relative"
-                style={{ backgroundColor: projects[1].bgColor }}
+                style={{ backgroundColor: second.bgColor }}
               >
-                <img src={projects[1].imgPath} alt={projects[1].title} />
+                <img src={second.imgPath} alt={second.title} />
                 {renderProjectButtons("library")}
               </div>
-              <h2>{projects[1].title}</h2>
+              <h2>{second.title}</h2>
               <div className="flex items-center gap-4 mt-1">
                 <div className="flex items-center gap-1 text-white-50 text-xs">
                   <Star className="w-3 h-3 text-yellow-500" />
-                  <span>{projects[1].stars}</span>
+                  <span>{second.stars}</span>
                 </div>
                 <div className="flex items-center gap-1 text-white-50 text-xs">
                   <GitFork className="w-3 h-3 text-blue-400" />
-                  <span>{projects[1].forks}</span>
+                  <span>{second.forks}</span>
                 </div>
               </div>
             </div>
@@ -150,20 +149,20 @@ const AppShowcase = () => {
             >
               <div
                 className="image-wrapper relative"
-                style={{ backgroundColor: projects[2].bgColor }}
+                style={{ backgroundColor: third.bgColor }}
               >
-                <img src={projects[2].imgPath} alt={projects[2].title} />
+                <img src={third.imgPath} alt={third.title} />
                 {renderProjectButtons("yc-directory")}
               </div>
-              <h2>{projects[2].title}</h2>
+              <h2>{third.title}</h2>
               <div className="flex items-center gap-4 mt-1">
                 <div className="flex items-center gap-1 text-white-50 text-xs">
                   <Star className="w-3 h-3 text-yellow-500" />
-                  <span>{projects[2].stars}</span>
+                  <span>{third.stars}</span>
                 </div>
                 <div className="flex items-center gap-1 text-white-50 text-xs">
                   <GitFork className="w-3 h-3 text-blue-400" />
-                  <span>{projects[2].forks}</span>
+                  <span>{third.forks}</span>
                 </div>
               </div>
             </div>

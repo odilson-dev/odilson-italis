@@ -4,11 +4,12 @@ import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 
 import CountUp from "react-countup";
-import { counterItems } from "../constants";
+import { useLocale } from "../i18n/LocaleContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedCounter = () => {
+  const { t } = useLocale();
   const counterRef = useRef<HTMLDivElement>(null);
   const countersRef = useRef<HTMLDivElement[]>([]);
 
@@ -17,37 +18,34 @@ const AnimatedCounter = () => {
       const numberElement = counter.querySelector(
         ".counter-number"
       ) as HTMLElement;
-      const item = counterItems[index];
+      const item = t.counterItems[index];
 
       if (!numberElement) return;
 
-      // Set initial value to 0
       gsap.set(numberElement, { innerText: "0" });
 
-      // Create the counting animation
       gsap.to(numberElement, {
         innerText: item.value,
         duration: 2.5,
         ease: "power2.out",
-        snap: { innerText: 1 }, // Ensures whole numbers
+        snap: { innerText: 1 },
         scrollTrigger: {
           trigger: "#counter",
           start: "top center",
         },
-        // Add the suffix after counting is complete
         onComplete: () => {
           numberElement.textContent = `${item.value}${item.suffix}`;
         },
       });
     }, counterRef);
-  }, []);
+  }, [t.counterItems]);
 
   return (
     <div id="counter" ref={counterRef} className="padding-x-lg  mt-32">
       <div className="mx-auto grid-4-cols">
-        {counterItems.map((item, index) => (
+        {t.counterItems.map((item, index) => (
           <div
-            key={index}
+            key={item.label}
             ref={(el: HTMLDivElement | null) => {
               if (el) countersRef.current[index] = el;
             }}

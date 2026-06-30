@@ -1,0 +1,302 @@
+import type { Translations } from "../types";
+
+const wordCycle = (
+  ideas: string,
+  concepts: string,
+  designs: string,
+  code: string,
+) => [
+  { text: ideas, imgPath: "/images/ideas.svg" },
+  { text: concepts, imgPath: "/images/concepts.svg" },
+  { text: designs, imgPath: "/images/designs.svg" },
+  { text: code, imgPath: "/images/code.svg" },
+  { text: ideas, imgPath: "/images/ideas.svg" },
+  { text: concepts, imgPath: "/images/concepts.svg" },
+  { text: designs, imgPath: "/images/designs.svg" },
+  { text: code, imgPath: "/images/code.svg" },
+];
+
+export const fr: Translations = {
+  meta: {
+    documentTitle: "Odilson Italis — Développeur FullStack",
+  },
+  nav: {
+    role: "Développeur FullStack",
+    resume: "CV",
+    hireMe: "Embauchez-moi",
+  },
+  navLinks: [
+    { name: "À propos", link: "#about" },
+    { name: "Projets", link: "#work" },
+    { name: "Expérience", link: "#experience" },
+    { name: "Compétences", link: "#skills" },
+    { name: "Témoignages", link: "#testimonials" },
+    { name: "Communauté", link: "#community" },
+  ],
+  hero: {
+    shaping: "Transformer",
+    intoRealProjects: "en Projets Concrets",
+    thatDeliverResults: "qui Génèrent des Résultats",
+    bio: "Salut, je suis Odilson. Je crée des applications web et mobiles qui transforment les visiteurs en clients.",
+    cta: "Voir mes projets",
+  },
+  words: wordCycle("Idées", "Concepts", "Designs", "Code"),
+  about: {
+    title: "À propos de moi",
+    sub: "👨‍💻 Qui je suis",
+    paragraphs: [
+      "Bonjour ! Je suis Odilson, un développeur passionné dédié à la création d'expériences numériques exceptionnelles. Avec une solide base en technologies web et mobiles, j'excelle à transformer des problèmes complexes en solutions élégantes et conviviales.",
+      "Mon parcours dans la tech est guidé par la curiosité et une envie constante d'apprendre. Que ce soit pour concevoir des interfaces front-end réactives ou architecturer des systèmes back-end robustes, j'aborde chaque projet avec un souci de qualité, de performance et d'évolutivité.",
+      "Quand je ne code pas, vous me trouverez en train d'explorer de nouvelles technologies, de contribuer à des projets open source ou de partager mes connaissances avec la communauté. Je suis aussi membre du",
+    ],
+    communityLink: "Coding Club Cayes",
+    communitySuffix:
+      ", contribuant à faire grandir l'écosystème tech haïtien dans le sud.",
+    viewWork: "Voir mes projets",
+  },
+  counterItems: [
+    { value: 15, suffix: "+", label: "Années d'expérience" },
+    { value: 200, suffix: "+", label: "Clients satisfaits" },
+    { value: 108, suffix: "+", label: "Projets réalisés" },
+    { value: 90, suffix: "%", label: "Taux de fidélisation" },
+  ],
+  showcase: {
+    title: "Projets en vedette",
+    sub: "🚀 Mon travail",
+    github: "GitHub",
+    liveView: "Voir en ligne",
+  },
+  projects: [
+    {
+      id: "rplace-convex",
+      title: "r/place × Convex — Toile collaborative en temps réel",
+      description:
+        "Une toile collaborative style r/place avec synchronisation instantanée via Convex — requêtes réactives, mutations groupées et UI optimiste sur Next.js 16 & React 19.",
+      imgPath: "/images/project-rplace-convex.png",
+      githubUrl: "https://github.com/odilson-dev/rpkace-convex",
+      liveUrl: "https://rplace-convex-lime.vercel.app/",
+      stars: 0,
+      forks: 0,
+    },
+    {
+      id: "library",
+      title: "Plateforme de gestion de bibliothèque",
+      description:
+        "Un système complet de gestion de bibliothèque construit avec des technologies web modernes.",
+      imgPath: "/images/project2.png",
+      bgColor: "#FFEFDB",
+      githubUrl: "https://github.com/odilson-dev/library-platform",
+      liveUrl: "https://library-demo.com",
+      stars: 85,
+      forks: 22,
+    },
+    {
+      id: "yc-directory",
+      title: "YC Directory — Application vitrine de startups",
+      description:
+        "Une plateforme pour découvrir et mettre en avant des startups innovantes.",
+      imgPath: "/images/project3.png",
+      bgColor: "#FFE7EB",
+      githubUrl: "https://github.com/odilson-dev/yc-directory",
+      liveUrl: "https://yc-directory-demo.com",
+      stars: 210,
+      forks: 64,
+    },
+  ],
+  abilities: [
+    {
+      imgPath: "/images/seo.png",
+      title: "Focus qualité",
+      desc: "Des résultats de haute qualité avec une attention portée à chaque détail.",
+    },
+    {
+      imgPath: "/images/chat.png",
+      title: "Communication fiable",
+      desc: "Vous tenir informé à chaque étape pour garantir transparence et clarté.",
+    },
+    {
+      imgPath: "/images/time.png",
+      title: "Livraison dans les délais",
+      desc: "Des projets livrés à temps, avec qualité et souci du détail.",
+    },
+  ],
+  experience: {
+    title: "Expérience professionnelle",
+    sub: "💼 Mon parcours",
+    responsibilities: "Responsabilités",
+  },
+  expCards: [
+    {
+      review:
+        "Odilson a apporté créativité et expertise technique à l'équipe, améliorant significativement les performances front-end. Son travail a été inestimable pour offrir des expériences plus rapides.",
+      imgPath: "/images/logos/creaticshub_2.png",
+      logoPath: "/images/logos/creaticshub_1.png",
+      title: "Développeur Frontend",
+      date: "Novembre 2024 - Présent",
+      responsibilities: [
+        "Développement et maintenance des fonctionnalités de l'application web CreaticsHub.",
+        "Collaboration étroite avec les designers UI/UX pour des expériences utilisateur fluides.",
+        "Optimisation des applications web pour une vitesse et une évolutivité maximales.",
+      ],
+    },
+  ],
+  techStack: {
+    title: "Comment je peux contribuer & mes compétences clés",
+    sub: "🤝 Ce que j'apporte",
+  },
+  techStackImgs: [
+    {
+      name: "Développeur React",
+      imgPath: "/images/logos/react.png",
+      level: 95,
+    },
+    {
+      name: "Développeur Next.js",
+      imgPath: "/images/logos/nextjs-logo.png",
+      level: 90,
+    },
+    {
+      name: "Développeur Backend",
+      imgPath: "/images/logos/node.png",
+      level: 85,
+    },
+    {
+      name: "Développeur Expo",
+      imgPath: "/images/logos/expo.jpeg",
+      level: 80,
+    },
+    {
+      name: "Chef de projet",
+      imgPath: "/images/logos/git.svg",
+      level: 85,
+    },
+  ],
+  testimonials: {
+    title: "Ce que les gens disent de moi",
+    sub: "⭐️ Témoignages clients",
+    items: [
+      {
+        name: "Esther Howard",
+        mentions: "@estherhoward",
+        review:
+          "Je ne peux pas assez recommander Odilson. Il a su transformer nos exigences complexes en un site web fluide et fonctionnel. Ses capacités de résolution de problèmes sont remarquables.",
+        imgPath: "/images/client1.png",
+      },
+      {
+        name: "Wade Warren",
+        mentions: "@wadewarren",
+        review:
+          "Travailler avec Odilson a été une expérience fantastique. Il a transformé notre site obsolète en une plateforme moderne et intuitive. Son souci du détail et son engagement envers la qualité sont inégalés. Je le recommande vivement pour tout projet web.",
+        imgPath: "/images/client3.png",
+      },
+      {
+        name: "Guy Hawkins",
+        mentions: "@guyhawkins",
+        review:
+          "Collaborer avec Odilson a été un vrai plaisir. Son professionnalisme, sa réactivité et son dévouement pour livrer des résultats exceptionnels ont été évidents tout au long du projet. Son enthousiasme pour chaque aspect du développement se démarque vraiment.",
+        imgPath: "/images/client2.png",
+      },
+      {
+        name: "Marvin McKinney",
+        mentions: "@marvinmckinney",
+        review:
+          "Odilson a été un plaisir à travailler. Il a transformé notre site obsolète en une plateforme fraîche et intuitive, à la fois moderne et facile à naviguer. Un travail remarquable.",
+        imgPath: "/images/client5.png",
+      },
+      {
+        name: "Floyd Miles",
+        mentions: "@floydmiles",
+        review:
+          "L'expertise d'Odilson en développement web est vraiment impressionnante. Il a livré une solution robuste et évolutive pour notre site e-commerce, et nos ventes en ligne ont nettement augmenté depuis le lancement.",
+        imgPath: "/images/client4.png",
+      },
+      {
+        name: "Albert Flores",
+        mentions: "@albertflores",
+        review:
+          "Odilson a été un plaisir à travailler. Il a parfaitement compris nos besoins et livré un site qui a dépassé nos attentes. Ses compétences en front-end et back-end sont excellentes.",
+        imgPath: "/images/client6.png",
+      },
+    ],
+  },
+  community: {
+    title: "Communauté & Open Source",
+    sub: "🌐 Implication tech & activité",
+    memberSince: "Membre depuis",
+    branchOf: "Une antenne de",
+    visitOrg: "Visiter Coding Club Haïti",
+    integrationCeremony: "Cérémonie d'intégration",
+    githubActivity: "Activité GitHub",
+    githubContributions: "Mes contributions open source de la dernière année.",
+    viewLarger: "Voir en grand",
+    highlight: {
+      id: "coding-club-cayes",
+      title: "Coding Club Cayes",
+      subtitle: "Cérémonie d'intégration · Les Cayes, Haïti",
+      organization: "Coding Club Haïti",
+      organizationUrl: "https://codingclubhaiti.com",
+      memberSince: "27 juin 2026",
+      location: "Les Cayes, Sud, Haïti",
+      description: [
+        "En juin 2026, j'ai été officiellement intégré comme membre du Coding Club Cayes — la plus récente antenne du Coding Club Haïti dans le sud du pays. La cérémonie d'intégration a réuni de jeunes développeurs passionnés unis par une mission commune : apprendre, créer, innover et impacter.",
+        "Coding Club Haïti est une communauté nationale à but non lucratif lancée en 2022 pour démocratiser les compétences numériques à travers Haïti. Avec des hubs à Carrefour, Cap-Haïtien et maintenant Les Cayes, le mouvement forme la prochaine génération de développeurs haïtiens via des ateliers, hackathons et programmes inclusifs comme NUMECO et Women TechUp.",
+        "Faire partie du Coding Club Cayes, c'est contribuer à un écosystème tech local dès le départ — collaborer avec les autres membres, grandir en tant que développeur et aider à élargir l'accès à la technologie dans la région sud d'Haïti.",
+      ],
+      photos: [
+        {
+          src: "/images/coding-club-cayes/certificate.png",
+          alt: "Certificat d'adhésion pour Italis Odilson Woody — Coding Club Cayes",
+          caption: "Mon certificat officiel d'adhésion",
+          featured: true,
+        },
+        {
+          src: "/images/coding-club-cayes/group-on-stage.png",
+          alt: "Membres du Coding Club Cayes sur scène lors de la cérémonie d'intégration",
+          caption: "Les membres sur scène lors de la cérémonie",
+        },
+        {
+          src: "/images/coding-club-cayes/banner.png",
+          alt: "Bannière Coding Club Haïti — Apprendre, Créer, Innover, Impacter",
+          caption: "Coding Club Haïti — Apprendre, Créer, Innover, Impacter",
+        },
+        {
+          src: "/images/coding-club-cayes/certificate-presentation.png",
+          alt: "Remise des certificats d'adhésion lors de la cérémonie d'intégration",
+          caption: "Moment de remise des certificats",
+        },
+        {
+          src: "/images/coding-club-cayes/audience-listening.png",
+          alt: "Membres du Coding Club Cayes assistant à la cérémonie d'intégration",
+          caption: "Les membres à la cérémonie d'intégration",
+        },
+      ],
+    },
+  },
+  contact: {
+    title: "Contactez-moi – Restons en lien",
+    sub: "💬 Des questions ou des idées ? Parlons-en ! 🚀",
+    nameLabel: "Votre nom",
+    namePlaceholder: "Comment vous appelez-vous ?",
+    emailLabel: "Votre email",
+    emailPlaceholder: "Quelle est votre adresse email ?",
+    messageLabel: "Votre message",
+    messagePlaceholder: "Comment puis-je vous aider ?",
+    sending: "Envoi en cours...",
+    send: "Envoyer le message",
+    successTitle: (name: string) => `Merci ${name} !`,
+    successDescription: "Je vous répondrai dès que possible.",
+    errorMessage: "Oups, une erreur s'est produite. Veuillez réessayer.",
+  },
+  footer: {
+    rights: "Tous droits réservés.",
+    madeWith: "Fait avec",
+    backToTop: "Retour en haut",
+  },
+  lightbox: {
+    preview: "Aperçu de l'image",
+    closePreview: "Fermer l'aperçu",
+    close: "Fermer",
+    previous: "Image précédente",
+    next: "Image suivante",
+  },
+};

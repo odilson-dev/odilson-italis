@@ -3,9 +3,11 @@ import gsap from "gsap";
 
 import Button from "../components/Button";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
-import { words } from "../constants";
+import { useLocale } from "../i18n/LocaleContext";
 
 const Hero = () => {
+  const { t } = useLocale();
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -21,22 +23,21 @@ const Hero = () => {
       </div>
 
       <div className="hero-layout">
-        {/* LEFT: Hero Content */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                Shaping
+                {t.hero.shaping}
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((word, index) => (
+                    {t.words.map((word, index) => (
                       <span
                         key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
                           src={word.imgPath}
-                          alt="person"
+                          alt=""
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
                         <span>{word.text}</span>
@@ -45,23 +46,21 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1>{t.hero.intoRealProjects}</h1>
+              <h1>{t.hero.thatDeliverResults}</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I'm Odilson, I build web & mobile apps that turns visitors
-              into customers.
+              {t.hero.bio}
             </p>
 
             <Button
-              text="See My Work"
+              text={t.hero.cta}
               className="md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />
           </div>
         </header>
 
-        {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
             <HeroExperience />

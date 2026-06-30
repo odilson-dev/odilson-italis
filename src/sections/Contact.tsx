@@ -3,7 +3,10 @@ import { useRef, useState } from "react";
 
 import { toast } from "sonner";
 import TitleHeader from "../components/TitleHeader";
+import { useLocale } from "../i18n/LocaleContext";
+
 const Contact = () => {
+  const { t } = useLocale();
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
@@ -41,8 +44,8 @@ const Contact = () => {
         () => {
           setLoading(false);
 
-          toast.success(`Thank you ${form.name}!`, {
-            description: "I will get back to you as soon as possible.",
+          toast.success(t.contact.successTitle(form.name), {
+            description: t.contact.successDescription,
             duration: 5000,
           });
 
@@ -56,17 +59,15 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          toast.error("Ahh, something went wrong. Please try again.");
+          toast.error(t.contact.errorMessage);
         }
       );
   };
+
   return (
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader
-          title="Get in Touch – Let’s Connect"
-          sub="💬 Have questions or ideas? Let’s talk! 🚀"
-        />
+        <TitleHeader title={t.contact.title} sub={t.contact.sub} />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
@@ -76,39 +77,39 @@ const Contact = () => {
                 className="w-full flex flex-col gap-7"
               >
                 <div>
-                  <label htmlFor="name">Your name</label>
+                  <label htmlFor="name">{t.contact.nameLabel}</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder={t.contact.namePlaceholder}
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email">Your Email</label>
+                  <label htmlFor="email">{t.contact.emailLabel}</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="What’s your email address?"
+                    placeholder={t.contact.emailPlaceholder}
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message">Your Message</label>
+                  <label htmlFor="message">{t.contact.messageLabel}</label>
                   <textarea
                     id="message"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="How can I help you?"
+                    placeholder={t.contact.messagePlaceholder}
                     rows={5}
                     required
                   />
@@ -122,7 +123,7 @@ const Contact = () => {
                   >
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? t.contact.sending : t.contact.send}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />

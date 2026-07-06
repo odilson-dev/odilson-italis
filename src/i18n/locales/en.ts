@@ -194,11 +194,11 @@ export const en: Translations = {
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
-        name: "Floyd Miles",
-        role: "E-commerce Manager",
+        name: "Samandina Jerome",
+        role: "UI/UX Designer | Front-End Developer",
         review:
-          "Odilson's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He's a true professional!",
-        imgPath: "/images/client4.png",
+          "Working with Odilson on CreaticsHub projects has been a very pleasant experience. He places real importance on the quality of the user experience and makes sure to follow the mockups while offering relevant suggestions when necessary. Communication with him is smooth, and he’s always open to feedback to improve the product. He’s a conscientious developer who facilitates collaboration between the design and development teams.",
+        imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
         name: "Albert Flores",

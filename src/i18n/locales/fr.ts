@@ -204,11 +204,11 @@ export const fr: Translations = {
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
-        name: "Floyd Miles",
-        role: "Responsable e-commerce",
+        name: "Samandina Jerome",
+        role: "UI/UX Designer | Développeuse Front-End",
         review:
-          "L'expertise d'Odilson en développement web est vraiment impressionnante. Il a livré une solution robuste et évolutive pour notre site e-commerce, et nos ventes en ligne ont nettement augmenté depuis le lancement.",
-        imgPath: "/images/client4.png",
+          "Collaborer avec Odilson sur les projets de CreaticsHub a été une expérience très agréable. Il accorde une réelle importance à la qualité de l'expérience utilisateur et veille à respecter les maquettes tout en apportant des propositions pertinentes lorsque cela est nécessaire. La communication avec lui est fluide et il est toujours ouvert aux retours afin d'améliorer le produit. C'est un développeur consciencieux qui facilite le travail entre les équipes design et développement.",
+        imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
         name: "Albert Flores",

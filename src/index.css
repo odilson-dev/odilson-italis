@@ -58,12 +58,12 @@ section {
   }
 
   .testimonial-marquee-track {
-    animation: testimonial-marquee-up 50s linear infinite;
+    animation: testimonial-marquee-up 140s linear infinite;
     will-change: transform;
   }
 
   .testimonial-marquee-track-down {
-    animation: testimonial-marquee-down 50s linear infinite;
+    animation: testimonial-marquee-down 140s linear infinite;
     will-change: transform;
   }
 
@@ -73,11 +73,11 @@ section {
 
   @media (max-width: 640px) {
     .testimonial-marquee-track {
-      animation-duration: 40s;
+      animation-duration: 110s;
     }
 
     .testimonial-marquee-track-down {
-      animation-duration: 40s;
+      animation-duration: 110s;
     }
   }
 

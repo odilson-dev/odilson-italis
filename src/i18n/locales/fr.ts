@@ -190,11 +190,11 @@ export const fr: Translations = {
         imgPath: "/images/profile-pictures/yuri.jpeg",
       },
       {
-        name: "Guy Hawkins",
-        role: "Directeur marketing",
+        name: "Mario Sylainx S. Gauthier",
+        role: "Ingénieur logiciel (Spécialiste IoT et Cybersécurité)",
         review:
-          "Collaborer avec Odilson a été un vrai plaisir. Son professionnalisme, sa réactivité et son dévouement pour livrer des résultats exceptionnels ont été évidents tout au long du projet. Son enthousiasme pour chaque aspect du développement se démarque vraiment.",
-        imgPath: "/images/client2.png",
+          "J’ai rencontré Odilson à ses débuts. Il m’a confié qu’il souhaitait relever de nouveaux défis, notamment sur React et Ruby on Rails. Peu de temps après, nous avons fait appel à lui pour renforcer l’équipe sur le projet CreaticsHub, où il a rapidement gagné notre confiance. Professionnel, à l’écoute, curieux et passionné, il n’hésite pas à proposer des solutions pertinentes. Aujourd’hui, il est capable de travailler sur de gros projets avec rigueur et efficacité. C’est une personne avec qui j’apprécie collaborer.",
+        imgPath: "/images/profile-pictures/sylainx.jpeg",
       },
       {
         name: "Marvin McKinney",

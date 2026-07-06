@@ -173,11 +173,11 @@ export const en: Translations = {
         imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
-        name: "Wade Warren",
-        role: "CEO",
+        name: "Yuri G",
+        role: "Backend Developer",
         review:
-          "Working with Odilson was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-        imgPath: "/images/client3.png",
+          "At CreaticsHub, I had the opportunity to work with Odilson on several technical aspects of our projects. He is a developer who strives to understand problems in depth before proposing a solution. He is thorough, communicates effectively with his team, and constantly seeks to improve his skills. His collaborative attitude and desire to grow make him an excellent teammate.",
+        imgPath: "/images/profile-pictures/yuri.jpeg",
       },
       {
         name: "Guy Hawkins",
@@ -263,7 +263,7 @@ export const en: Translations = {
     },
   },
   contact: {
-    title: "Get in Touch – Let's Connect",
+    title: "Get in Touch – Let's Work Together",
     sub: "💬 Have questions or ideas? Let's talk! 🚀",
     nameLabel: "Your name",
     namePlaceholder: "What's your good name?",

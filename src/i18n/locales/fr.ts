@@ -183,11 +183,11 @@ export const fr: Translations = {
         imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
-        name: "Wade Warren",
-        role: "PDG",
+        name: "Yuri G",
+        role: "Développeur Backend",
         review:
-          "Travailler avec Odilson a été une expérience fantastique. Il a transformé notre site obsolète en une plateforme moderne et intuitive. Son souci du détail et son engagement envers la qualité sont inégalés. Je le recommande vivement pour tout projet web.",
-        imgPath: "/images/client3.png",
+          "Chez CreaticsHub, j'ai eu l'occasion de travailler avec Odilson sur plusieurs aspects techniques de nos projets. C'est un développeur qui cherche à comprendre les problèmes en profondeur avant de proposer une solution. Il fait preuve de rigueur, communique efficacement avec son équipe et cherche constamment à améliorer ses compétences. Son état d'esprit collaboratif et sa volonté de progresser font de lui un excellent coéquipier.",
+        imgPath: "/images/profile-pictures/yuri.jpeg",
       },
       {
         name: "Guy Hawkins",
@@ -273,7 +273,7 @@ export const fr: Translations = {
     },
   },
   contact: {
-    title: "Contactez-moi – Restons en lien",
+    title: "Contactez-moi – Travaillons ensemble",
     sub: "💬 Des questions ou des idées ? Parlons-en ! 🚀",
     nameLabel: "Votre nom",
     namePlaceholder: "Comment vous appelez-vous ?",

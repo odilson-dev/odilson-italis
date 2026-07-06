@@ -4,7 +4,7 @@ const wordCycle = (
   ideas: string,
   concepts: string,
   designs: string,
-  code: string
+  code: string,
 ) => [
   { text: ideas, imgPath: "/images/ideas.svg" },
   { text: concepts, imgPath: "/images/concepts.svg" },
@@ -50,8 +50,7 @@ export const en: Translations = {
       "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the community. I'm also a member of",
     ],
     communityLink: "Coding Club Cayes",
-    communitySuffix:
-      ", helping grow Haiti's tech ecosystem in the south.",
+    communitySuffix: ", helping grow Haiti's tech ecosystem in the south.",
     viewWork: "View My Work",
   },
   counterItems: [
@@ -167,43 +166,43 @@ export const en: Translations = {
     sub: "⭐️ Customer feedback highlights",
     items: [
       {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Joberno Birlado Joseph",
+        role: "CEO of CreaticsHub | Lead Full-Stack Developer",
         review:
-          "I can't say enough good things about Odilson. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-        imgPath: "/images/client1.png",
+          "I had the pleasure of working with Odilson at CreaticsHub on several development projects. He is a dedicated, self-motivated developer who is deeply committed to his work. He quickly understands requirements, proposes relevant solutions, and always ensures that the code he produces is clean, maintainable, and scalable. I also appreciated his ability to quickly learn new technologies and adapt to the challenges he faces. He is a professional you can count on, and I highly recommend him  with confidence.",
+        imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
-        name: "Wade Warren",
-        mentions: "@wadewarren",
+        name: "Yuri G",
+        role: "Full-Stack Developer | Cybersecurity & Robotics Enthusiast",
         review:
-          "Working with Odilson was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-        imgPath: "/images/client3.png",
+          "At CreaticsHub, I had the opportunity to work with Odilson on several technical aspects of our projects. He is a developer who strives to understand problems in depth before proposing a solution. He is thorough, communicates effectively with his team, and constantly seeks to improve his skills. His collaborative attitude and desire to grow make him an excellent teammate.",
+        imgPath: "/images/profile-pictures/yuri.jpeg",
       },
       {
-        name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        name: "Mario Sylainx S. Gauthier",
+        role: "Software Engineer | IoT and Cybersecurity Specialist",
         review:
-          "Collaborating with Odilson was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Odilson's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Odilson is the ideal partner.",
-        imgPath: "/images/client2.png",
+          "I met Odilson early in his career. He told me he wanted to take on new challenges, particularly with React and Ruby on Rails. Shortly thereafter, we brought him on board to strengthen the team working on the CreaticsHub project, where he quickly earned our trust. Professional, attentive, curious, and passionate, he doesn’t hesitate to propose relevant solutions. Today, he’s capable of working on large projects with rigor and efficiency. He’s someone I really appreciate working with...",
+        imgPath: "/images/profile-pictures/sylainx.jpeg",
       },
       {
-        name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        name: "Cosy Joseph",
+        role: "Digital Transformation Executive | Ecosystem Builder",
         review:
-          "Odilson was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
-        imgPath: "/images/client5.png",
+          "On AGRONOU, Odilson has been a genuine asset. His sense of ownership stands out—he doesn't wait to be told what to build; he owns outcomes, not just tasks. He digs into the \"why,\" asks sharp questions about real-world challenges in Haiti and the Caribbean, and builds for users' real needs, not just technical convenience. One of the most naturally curious engineers I've worked with, he learns new tools fast, seeks business and market context beyond his lane, and aligns technical decisions with the bigger picture. Fast learner, genuine curiosity, real ownership: I'd want him on any team building something new.",
+        imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
-        name: "Floyd Miles",
-        mentions: "@floydmiles",
+        name: "Samandina Jerome",
+        role: "UI/UX Designer | Front-End Developer",
         review:
-          "Odilson's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He's a true professional!",
-        imgPath: "/images/client4.png",
+          "Working with Odilson on CreaticsHub projects has been a very pleasant experience. He places real importance on the quality of the user experience and makes sure to follow the mockups while offering relevant suggestions when necessary. Communication with him is smooth, and he’s always open to feedback to improve the product. He’s a conscientious developer who facilitates collaboration between the design and development teams.",
+        imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
         name: "Albert Flores",
-        mentions: "@albertflores",
+        role: "CTO",
         review:
           "Odilson was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
         imgPath: "/images/client6.png",
@@ -264,7 +263,7 @@ export const en: Translations = {
     },
   },
   contact: {
-    title: "Get in Touch – Let's Connect",
+    title: "Get in Touch – Let's Work Together",
     sub: "💬 Have questions or ideas? Let's talk! 🚀",
     nameLabel: "Your name",
     namePlaceholder: "What's your good name?",

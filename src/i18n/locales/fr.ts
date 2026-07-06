@@ -176,43 +176,43 @@ export const fr: Translations = {
     sub: "⭐️ Témoignages clients",
     items: [
       {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Joberno Birlado Joseph",
+        role: "Développeur Full-Stack senior | PDG de CreaticsHub",
         review:
-          "Je ne peux pas assez recommander Odilson. Il a su transformer nos exigences complexes en un site web fluide et fonctionnel. Ses capacités de résolution de problèmes sont remarquables.",
-        imgPath: "/images/client1.png",
+          "J'ai eu le plaisir de collaborer avec Odilson chez CreaticsHub sur plusieurs projets de développement. C'est un développeur sérieux, autonome et très investi dans son travail. Il comprend rapidement les besoins, propose des solutions pertinentes et veille toujours à produire un code propre, maintenable et évolutif. J'ai également apprécié sa capacité à apprendre rapidement de nouvelles technologies et à s'adapter aux défis rencontrés. C'est un professionnel sur qui l'on peut compter et que je recommande avec confiance.",
+        imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
-        name: "Wade Warren",
-        mentions: "@wadewarren",
+        name: "Yuri G",
+        role: "Développeur Backend",
         review:
-          "Travailler avec Odilson a été une expérience fantastique. Il a transformé notre site obsolète en une plateforme moderne et intuitive. Son souci du détail et son engagement envers la qualité sont inégalés. Je le recommande vivement pour tout projet web.",
-        imgPath: "/images/client3.png",
+          "Chez CreaticsHub, j'ai eu l'occasion de travailler avec Odilson sur plusieurs aspects techniques de nos projets. C'est un développeur qui cherche à comprendre les problèmes en profondeur avant de proposer une solution. Il fait preuve de rigueur, communique efficacement avec son équipe et cherche constamment à améliorer ses compétences. Son état d'esprit collaboratif et sa volonté de progresser font de lui un excellent coéquipier.",
+        imgPath: "/images/profile-pictures/yuri.jpeg",
       },
       {
-        name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        name: "Mario Sylainx S. Gauthier",
+        role: "Ingénieur logiciel (Spécialiste IoT et Cybersécurité)",
         review:
-          "Collaborer avec Odilson a été un vrai plaisir. Son professionnalisme, sa réactivité et son dévouement pour livrer des résultats exceptionnels ont été évidents tout au long du projet. Son enthousiasme pour chaque aspect du développement se démarque vraiment.",
-        imgPath: "/images/client2.png",
+          "J’ai rencontré Odilson à ses débuts. Il m’a confié qu’il souhaitait relever de nouveaux défis, notamment sur React et Ruby on Rails. Peu de temps après, nous avons fait appel à lui pour renforcer l’équipe sur le projet CreaticsHub, où il a rapidement gagné notre confiance. Professionnel, à l’écoute, curieux et passionné, il n’hésite pas à proposer des solutions pertinentes. Aujourd’hui, il est capable de travailler sur de gros projets avec rigueur et efficacité. C’est une personne avec qui j’apprécie collaborer.",
+        imgPath: "/images/profile-pictures/sylainx.jpeg",
       },
       {
-        name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        name: "Cosy Joseph",
+        role: "Directrice de la transformation numérique | Constructeur d'écosystème",
         review:
-          "Odilson a été un plaisir à travailler. Il a transformé notre site obsolète en une plateforme fraîche et intuitive, à la fois moderne et facile à naviguer. Un travail remarquable.",
-        imgPath: "/images/client5.png",
+          "Sur AGRONOU, Odilson a été un véritable atout. Son sens des responsabilités ressort : il n'attend pas qu'on lui dise quoi développer ; il vise les résultats, pas seulement les tâches. Il creuse le « pourquoi », pose des questions pertinentes sur les défis concrets en Haïti et dans les Caraïbes, et conçoit pour les vrais besoins des utilisateurs, pas seulement ce qui est techniquement pratique. L'un des ingénieurs les plus naturellement curieux avec lesquels j'ai travaillé, il assimile vite les nouveaux outils, cherche le contexte business et marché au-delà de son domaine, et aligne ses décisions techniques sur la vision d'ensemble. Apprentissage rapide, curiosité sincère, sens des responsabilités : je l'aurais dans toute équipe qui construit du nouveau.",
+        imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
-        name: "Floyd Miles",
-        mentions: "@floydmiles",
+        name: "Samandina Jerome",
+        role: "UI/UX Designer | Développeuse Front-End",
         review:
-          "L'expertise d'Odilson en développement web est vraiment impressionnante. Il a livré une solution robuste et évolutive pour notre site e-commerce, et nos ventes en ligne ont nettement augmenté depuis le lancement.",
-        imgPath: "/images/client4.png",
+          "Collaborer avec Odilson sur les projets de CreaticsHub a été une expérience très agréable. Il accorde une réelle importance à la qualité de l'expérience utilisateur et veille à respecter les maquettes tout en apportant des propositions pertinentes lorsque cela est nécessaire. La communication avec lui est fluide et il est toujours ouvert aux retours afin d'améliorer le produit. C'est un développeur consciencieux qui facilite le travail entre les équipes design et développement.",
+        imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
         name: "Albert Flores",
-        mentions: "@albertflores",
+        role: "Directeur technique",
         review:
           "Odilson a été un plaisir à travailler. Il a parfaitement compris nos besoins et livré un site qui a dépassé nos attentes. Ses compétences en front-end et back-end sont excellentes.",
         imgPath: "/images/client6.png",
@@ -273,7 +273,7 @@ export const fr: Translations = {
     },
   },
   contact: {
-    title: "Contactez-moi – Restons en lien",
+    title: "Contactez-moi – Travaillons ensemble",
     sub: "💬 Des questions ou des idées ? Parlons-en ! 🚀",
     nameLabel: "Votre nom",
     namePlaceholder: "Comment vous appelez-vous ?",

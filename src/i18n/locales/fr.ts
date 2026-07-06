@@ -176,43 +176,43 @@ export const fr: Translations = {
     sub: "⭐️ Témoignages clients",
     items: [
       {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Joberno Birlado Joseph",
+        role: "Développeur Full-Stack senior | PDG de CreaticsHub",
         review:
-          "Je ne peux pas assez recommander Odilson. Il a su transformer nos exigences complexes en un site web fluide et fonctionnel. Ses capacités de résolution de problèmes sont remarquables.",
-        imgPath: "/images/client1.png",
+          "J'ai eu le plaisir de collaborer avec Odilson chez CreaticsHub sur plusieurs projets de développement. C'est un développeur sérieux, autonome et très investi dans son travail. Il comprend rapidement les besoins, propose des solutions pertinentes et veille toujours à produire un code propre, maintenable et évolutif. J'ai également apprécié sa capacité à apprendre rapidement de nouvelles technologies et à s'adapter aux défis rencontrés. C'est un professionnel sur qui l'on peut compter et que je recommande avec confiance.",
+        imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
         name: "Wade Warren",
-        mentions: "@wadewarren",
+        role: "PDG",
         review:
           "Travailler avec Odilson a été une expérience fantastique. Il a transformé notre site obsolète en une plateforme moderne et intuitive. Son souci du détail et son engagement envers la qualité sont inégalés. Je le recommande vivement pour tout projet web.",
         imgPath: "/images/client3.png",
       },
       {
         name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        role: "Directeur marketing",
         review:
           "Collaborer avec Odilson a été un vrai plaisir. Son professionnalisme, sa réactivité et son dévouement pour livrer des résultats exceptionnels ont été évidents tout au long du projet. Son enthousiasme pour chaque aspect du développement se démarque vraiment.",
         imgPath: "/images/client2.png",
       },
       {
         name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        role: "Product Owner",
         review:
           "Odilson a été un plaisir à travailler. Il a transformé notre site obsolète en une plateforme fraîche et intuitive, à la fois moderne et facile à naviguer. Un travail remarquable.",
         imgPath: "/images/client5.png",
       },
       {
         name: "Floyd Miles",
-        mentions: "@floydmiles",
+        role: "Responsable e-commerce",
         review:
           "L'expertise d'Odilson en développement web est vraiment impressionnante. Il a livré une solution robuste et évolutive pour notre site e-commerce, et nos ventes en ligne ont nettement augmenté depuis le lancement.",
         imgPath: "/images/client4.png",
       },
       {
         name: "Albert Flores",
-        mentions: "@albertflores",
+        role: "Directeur technique",
         review:
           "Odilson a été un plaisir à travailler. Il a parfaitement compris nos besoins et livré un site qui a dépassé nos attentes. Ses compétences en front-end et back-end sont excellentes.",
         imgPath: "/images/client6.png",

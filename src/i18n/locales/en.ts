@@ -4,7 +4,7 @@ const wordCycle = (
   ideas: string,
   concepts: string,
   designs: string,
-  code: string
+  code: string,
 ) => [
   { text: ideas, imgPath: "/images/ideas.svg" },
   { text: concepts, imgPath: "/images/concepts.svg" },
@@ -50,8 +50,7 @@ export const en: Translations = {
       "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the community. I'm also a member of",
     ],
     communityLink: "Coding Club Cayes",
-    communitySuffix:
-      ", helping grow Haiti's tech ecosystem in the south.",
+    communitySuffix: ", helping grow Haiti's tech ecosystem in the south.",
     viewWork: "View My Work",
   },
   counterItems: [
@@ -167,43 +166,43 @@ export const en: Translations = {
     sub: "⭐️ Customer feedback highlights",
     items: [
       {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Joberno Birlado Joseph",
+        role: "Lead Full-Stack Developer | CEO of CreaticsHub",
         review:
-          "I can't say enough good things about Odilson. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-        imgPath: "/images/client1.png",
+          "I had the pleasure of working with Odilson at CreaticsHub on several development projects. He is a dedicated, self-motivated developer who is deeply committed to his work. He quickly understands requirements, proposes relevant solutions, and always ensures that the code he produces is clean, maintainable, and scalable. I also appreciated his ability to quickly learn new technologies and adapt to the challenges he faces. He is a professional you can count on, and I highly recommend him  with confidence.",
+        imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
         name: "Wade Warren",
-        mentions: "@wadewarren",
+        role: "CEO",
         review:
           "Working with Odilson was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
         imgPath: "/images/client3.png",
       },
       {
         name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        role: "Marketing Director",
         review:
           "Collaborating with Odilson was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Odilson's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Odilson is the ideal partner.",
         imgPath: "/images/client2.png",
       },
       {
         name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        role: "Product Owner",
         review:
           "Odilson was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
         imgPath: "/images/client5.png",
       },
       {
         name: "Floyd Miles",
-        mentions: "@floydmiles",
+        role: "E-commerce Manager",
         review:
           "Odilson's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He's a true professional!",
         imgPath: "/images/client4.png",
       },
       {
         name: "Albert Flores",
-        mentions: "@albertflores",
+        role: "CTO",
         review:
           "Odilson was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
         imgPath: "/images/client6.png",

@@ -87,7 +87,7 @@ export interface ExpLogo {
  */
 export interface Testimonial {
   name: string;
-  mentions: string;
+  role: string;
   review: string;
   imgPath: string;
 }

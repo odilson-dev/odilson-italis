@@ -39,7 +39,7 @@ const TestimonialCard = ({
         </div>
         <div>
           <p className="font-bold">{testimonial.name}</p>
-          <p className="text-white-50">{testimonial.mentions}</p>
+          <p className="text-white-50">{testimonial.role}</p>
         </div>
       </div>
     </GlowCard>
@@ -103,7 +103,7 @@ const MarqueeColumn = ({
       >
         {loopedItems.map((testimonial, index) => (
           <TestimonialCard
-            key={`${columnIndex}-${testimonial.mentions}-${index}`}
+            key={`${columnIndex}-${testimonial.name}-${index}`}
             testimonial={testimonial}
             index={columnIndex * 100 + index}
             onHoldStart={handleHoldStart}

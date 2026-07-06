@@ -189,7 +189,8 @@ export const en: Translations = {
       {
         name: "Cosy Joseph",
         role: "Digital Transformation Executive | Ecosystem Builder",
-        review: `Working with Odilson on AGRONOU has been a genuine asset to the project. What stands out most is his sense of ownership.  He doesn’t wait to be told what to build; he takes responsibility for outcomes, not just tasks. He consistently digs into the “why” behind a feature, asks sharp questions about the product’s real-world challenges in Haiti and the Caribbean, and comes back with solutions shaped around what users actually need, not just what’s technically convenient. He’s also one of the most naturally curious engineers I’ve worked with. He picks up new tools and concepts quickly, and rather than staying in his lane, he actively seeks out context on the business and the market so his technical decisions serve the bigger picture. That combination, fast learning, genuine curiosity, and real ownership, makes him someone I'd want on any team building something new.`,
+        review:
+          "On AGRONOU, Odilson has been a genuine asset. His sense of ownership stands out—he doesn't wait to be told what to build; he owns outcomes, not just tasks. He digs into the \"why,\" asks sharp questions about real-world challenges in Haiti and the Caribbean, and builds for users' real needs, not just technical convenience. One of the most naturally curious engineers I've worked with, he learns new tools fast, seeks business and market context beyond his lane, and aligns technical decisions with the bigger picture. Fast learner, genuine curiosity, real ownership: I'd want him on any team building something new.",
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {

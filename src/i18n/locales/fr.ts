@@ -199,9 +199,8 @@ export const fr: Translations = {
       {
         name: "Cosy Joseph",
         role: "Directrice de la transformation numérique | Constructeur d'écosystème",
-        review: `Travailler avec Odilson sur AGRONOU a été un véritable atout pour le projet. Ce qui ressort le plus, c’est son sens des responsabilités. Il n’attend pas qu’on lui dise quoi développer ; il assume la responsabilité des résultats, et pas seulement des tâches. Il cherche systématiquement à comprendre le « pourquoi » d’une fonctionnalité, pose des questions pertinentes sur les défis concrets auxquels le produit est confronté en Haïti et dans les Caraïbes, et propose des solutions adaptées aux besoins réels des utilisateurs, et non pas simplement à ce qui est techniquement pratique.
-
-C’est également l’un des ingénieurs les plus naturellement curieux avec lesquels j’ai eu l’occasion de travailler. Il assimile rapidement les nouveaux outils et concepts, et plutôt que de se cantonner à son domaine de compétence, il s’efforce activement de mieux comprendre le contexte de l’entreprise et du marché afin que ses décisions techniques s’inscrivent dans une vision d’ensemble. Cette combinaison — capacité d’apprentissage rapide, curiosité sincère et véritable sens des responsabilités — fait de lui quelqu’un que j’aimerais avoir dans n’importe quelle équipe chargée de développer quelque chose de nouveau.`,
+        review:
+          "Sur AGRONOU, Odilson a été un véritable atout. Son sens des responsabilités ressort : il n'attend pas qu'on lui dise quoi développer ; il vise les résultats, pas seulement les tâches. Il creuse le « pourquoi », pose des questions pertinentes sur les défis concrets en Haïti et dans les Caraïbes, et conçoit pour les vrais besoins des utilisateurs, pas seulement ce qui est techniquement pratique. L'un des ingénieurs les plus naturellement curieux avec lesquels j'ai travaillé, il assimile vite les nouveaux outils, cherche le contexte business et marché au-delà de son domaine, et aligne ses décisions techniques sur la vision d'ensemble. Apprentissage rapide, curiosité sincère, sens des responsabilités : je l'aurais dans toute équipe qui construit du nouveau.",
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {

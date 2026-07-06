@@ -57,13 +57,13 @@ section {
     );
   }
 
-  .testimonial-marquee-track {
-    animation: testimonial-marquee-up 140s linear infinite;
+  .testimonial-marquee-track-up {
+    animation: testimonial-marquee-down 220s linear infinite both reverse;
     will-change: transform;
   }
 
   .testimonial-marquee-track-down {
-    animation: testimonial-marquee-down 140s linear infinite;
+    animation: testimonial-marquee-down 220s linear infinite both;
     will-change: transform;
   }
 
@@ -72,17 +72,17 @@ section {
   }
 
   @media (max-width: 640px) {
-    .testimonial-marquee-track {
-      animation-duration: 110s;
+    .testimonial-marquee-track-up {
+      animation-duration: 180s;
     }
 
     .testimonial-marquee-track-down {
-      animation-duration: 110s;
+      animation-duration: 180s;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .testimonial-marquee-track,
+    .testimonial-marquee-track-up,
     .testimonial-marquee-track-down {
       animation: none;
     }

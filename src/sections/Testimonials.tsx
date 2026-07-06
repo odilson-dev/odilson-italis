@@ -1,12 +1,9 @@
 import {
   useEffect,
-  useLayoutEffect,
-  useMemo,
   useRef,
   useState,
   type MouseEvent,
   type PointerEvent,
-  type RefObject,
 } from "react";
 import GlowCard from "../components/GlowCard";
 import TitleHeader from "../components/TitleHeader";
@@ -14,11 +11,18 @@ import type { Testimonial } from "../constants/types";
 import { useLocale } from "../i18n/LocaleContext";
 
 const HOLD_DELAY_MS = 450;
+const SET_REPEATS = 6;
 
 const splitIntoColumns = (items: Testimonial[], count: number) =>
   Array.from({ length: count }, (_, column) =>
     items.filter((_, index) => index % count === column),
   );
+
+const buildLoopedItems = (items: Testimonial[]) => {
+  if (items.length === 0) return [];
+  const singleSet = Array.from({ length: SET_REPEATS }, () => items).flat();
+  return [...singleSet, ...singleSet];
+};
 
 const TestimonialCard = ({
   testimonial,
@@ -64,45 +68,6 @@ const TestimonialCard = ({
   </div>
 );
 
-const buildLoopedItems = (items: Testimonial[], copies: number) => {
-  if (items.length === 0) return [];
-  const singleSet = Array.from({ length: copies }, () => items).flat();
-  return [...singleSet, ...singleSet];
-};
-
-const useMarqueeCopies = (
-  items: Testimonial[],
-  viewportRef: RefObject<HTMLDivElement | null>,
-) => {
-  const measureRef = useRef<HTMLDivElement>(null);
-  const [copies, setCopies] = useState(3);
-
-  useLayoutEffect(() => {
-    const viewport = viewportRef.current;
-    const measure = measureRef.current;
-    if (!viewport || !measure || items.length === 0) return;
-
-    const syncCopies = () => {
-      const viewportHeight = viewport.clientHeight;
-      const oneCopyHeight = measure.scrollHeight;
-      if (viewportHeight <= 0 || oneCopyHeight <= 0) return;
-
-      const needed = Math.max(2, Math.ceil(viewportHeight / oneCopyHeight) + 1);
-      setCopies((prev) => (prev !== needed ? needed : prev));
-    };
-
-    syncCopies();
-
-    const observer = new ResizeObserver(syncCopies);
-    observer.observe(viewport);
-    observer.observe(measure);
-
-    return () => observer.disconnect();
-  }, [items, viewportRef]);
-
-  return { measureRef, copies };
-};
-
 const MarqueeColumn = ({
   items,
   direction,
@@ -112,12 +77,7 @@ const MarqueeColumn = ({
   direction: "up" | "down";
   columnIndex: number;
 }) => {
-  const viewportRef = useRef<HTMLDivElement>(null);
-  const { measureRef, copies } = useMarqueeCopies(items, viewportRef);
-  const loopedItems = useMemo(
-    () => buildLoopedItems(items, copies),
-    [items, copies],
-  );
+  const loopedItems = buildLoopedItems(items);
   const [hoverPaused, setHoverPaused] = useState(false);
   const [holdPaused, setHoldPaused] = useState(false);
   const paused = hoverPaused || holdPaused;
@@ -145,7 +105,6 @@ const MarqueeColumn = ({
 
   const handleHoldStart = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === "mouse") return;
-
     if (event.button !== 0) return;
 
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -169,38 +128,20 @@ const MarqueeColumn = ({
 
   const trackClass =
     direction === "up"
-      ? "testimonial-marquee-track flex flex-col"
+      ? "testimonial-marquee-track-up flex flex-col"
       : "testimonial-marquee-track-down flex flex-col";
 
   return (
     <div
-      ref={viewportRef}
-      className="relative h-full overflow-hidden"
+      className="relative h-full min-h-0 overflow-hidden"
       onMouseLeave={handleColumnMouseLeave}
     >
-      <div
-        ref={measureRef}
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 flex flex-col opacity-0"
-        aria-hidden="true"
-      >
-        {items.map((testimonial, index) => (
-          <TestimonialCard
-            key={`measure-${columnIndex}-${index}`}
-            testimonial={testimonial}
-            index={columnIndex * 1000 + index}
-            onHoverStart={() => undefined}
-            onHoldStart={() => undefined}
-            onHoldEnd={() => undefined}
-          />
-        ))}
-      </div>
-
       <div
         className={`${trackClass}${paused ? " testimonial-marquee-track-paused" : ""}`}
       >
         {loopedItems.map((testimonial, index) => (
           <TestimonialCard
-            key={`${columnIndex}-${testimonial.name}-${index}`}
+            key={`${columnIndex}-${index}`}
             testimonial={testimonial}
             index={columnIndex * 100 + index}
             onHoverStart={handleHoverStart}
@@ -221,12 +162,12 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+      <div className="w-full md:px-10 px-5">
         <TitleHeader title={t.testimonials.title} sub={t.testimonials.sub} />
 
         <div className="mt-10 sm:mt-16">
           <div className="testimonials-marquee-viewport h-[clamp(560px,75vh,960px)] overflow-hidden">
-            <div className="h-full md:hidden">
+            <div className="h-full min-h-0 md:hidden">
               <MarqueeColumn
                 items={testimonials}
                 direction="up"
@@ -234,7 +175,7 @@ const Testimonials = () => {
               />
             </div>
 
-            <div className="hidden md:grid md:grid-cols-2 lg:hidden gap-5 h-full">
+            <div className="hidden h-full min-h-0 md:grid md:grid-cols-2 lg:hidden md:gap-5 *:min-h-0">
               <MarqueeColumn
                 items={columns2[0]}
                 direction="up"
@@ -247,7 +188,7 @@ const Testimonials = () => {
               />
             </div>
 
-            <div className="hidden lg:grid lg:grid-cols-3 gap-6 h-full">
+            <div className="hidden h-full min-h-0 lg:grid lg:grid-cols-3 lg:gap-6 *:min-h-0">
               <MarqueeColumn
                 items={columns3[0]}
                 direction="up"

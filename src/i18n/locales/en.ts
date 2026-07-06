@@ -167,31 +167,30 @@ export const en: Translations = {
     items: [
       {
         name: "Joberno Birlado Joseph",
-        role: "Lead Full-Stack Developer | CEO of CreaticsHub",
+        role: "CEO of CreaticsHub | Lead Full-Stack Developer",
         review:
           "I had the pleasure of working with Odilson at CreaticsHub on several development projects. He is a dedicated, self-motivated developer who is deeply committed to his work. He quickly understands requirements, proposes relevant solutions, and always ensures that the code he produces is clean, maintainable, and scalable. I also appreciated his ability to quickly learn new technologies and adapt to the challenges he faces. He is a professional you can count on, and I highly recommend him  with confidence.",
         imgPath: "/images/profile-pictures/joberno.jpeg",
       },
       {
         name: "Yuri G",
-        role: "Backend Developer",
+        role: "Full-Stack Developer | Cybersecurity & Robotics Enthusiast",
         review:
           "At CreaticsHub, I had the opportunity to work with Odilson on several technical aspects of our projects. He is a developer who strives to understand problems in depth before proposing a solution. He is thorough, communicates effectively with his team, and constantly seeks to improve his skills. His collaborative attitude and desire to grow make him an excellent teammate.",
         imgPath: "/images/profile-pictures/yuri.jpeg",
       },
       {
         name: "Mario Sylainx S. Gauthier",
-        role: "Software Engineer (IoT and Cybersecurity Specialist)",
+        role: "Software Engineer | IoT and Cybersecurity Specialist",
         review:
           "I met Odilson early in his career. He told me he wanted to take on new challenges, particularly with React and Ruby on Rails. Shortly thereafter, we brought him on board to strengthen the team working on the CreaticsHub project, where he quickly earned our trust. Professional, attentive, curious, and passionate, he doesn’t hesitate to propose relevant solutions. Today, he’s capable of working on large projects with rigor and efficiency. He’s someone I really appreciate working with...",
         imgPath: "/images/profile-pictures/sylainx.jpeg",
       },
       {
-        name: "Marvin McKinney",
-        role: "Product Owner",
-        review:
-          "Odilson was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
-        imgPath: "/images/client5.png",
+        name: "Cosy Joseph",
+        role: "Digital Transformation Executive | Ecosystem Builder",
+        review: `Working with Odilson on AGRONOU has been a genuine asset to the project. What stands out most is his sense of ownership.  He doesn’t wait to be told what to build; he takes responsibility for outcomes, not just tasks. He consistently digs into the “why” behind a feature, asks sharp questions about the product’s real-world challenges in Haiti and the Caribbean, and comes back with solutions shaped around what users actually need, not just what’s technically convenient. He’s also one of the most naturally curious engineers I’ve worked with. He picks up new tools and concepts quickly, and rather than staying in his lane, he actively seeks out context on the business and the market so his technical decisions serve the bigger picture. That combination, fast learning, genuine curiosity, and real ownership, makes him someone I'd want on any team building something new.`,
+        imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
         name: "Floyd Miles",

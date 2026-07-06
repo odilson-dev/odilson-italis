@@ -197,11 +197,12 @@ export const fr: Translations = {
         imgPath: "/images/profile-pictures/sylainx.jpeg",
       },
       {
-        name: "Marvin McKinney",
-        role: "Product Owner",
-        review:
-          "Odilson a été un plaisir à travailler. Il a transformé notre site obsolète en une plateforme fraîche et intuitive, à la fois moderne et facile à naviguer. Un travail remarquable.",
-        imgPath: "/images/client5.png",
+        name: "Cosy Joseph",
+        role: "Directrice de la transformation numérique | Constructeur d'écosystème",
+        review: `Travailler avec Odilson sur AGRONOU a été un véritable atout pour le projet. Ce qui ressort le plus, c’est son sens des responsabilités. Il n’attend pas qu’on lui dise quoi développer ; il assume la responsabilité des résultats, et pas seulement des tâches. Il cherche systématiquement à comprendre le « pourquoi » d’une fonctionnalité, pose des questions pertinentes sur les défis concrets auxquels le produit est confronté en Haïti et dans les Caraïbes, et propose des solutions adaptées aux besoins réels des utilisateurs, et non pas simplement à ce qui est techniquement pratique.
+
+C’est également l’un des ingénieurs les plus naturellement curieux avec lesquels j’ai eu l’occasion de travailler. Il assimile rapidement les nouveaux outils et concepts, et plutôt que de se cantonner à son domaine de compétence, il s’efforce activement de mieux comprendre le contexte de l’entreprise et du marché afin que ses décisions techniques s’inscrivent dans une vision d’ensemble. Cette combinaison — capacité d’apprentissage rapide, curiosité sincère et véritable sens des responsabilités — fait de lui quelqu’un que j’aimerais avoir dans n’importe quelle équipe chargée de développer quelque chose de nouveau.`,
+        imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
         name: "Floyd Miles",

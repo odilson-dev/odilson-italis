@@ -111,7 +111,7 @@ export interface Project {
   imgPath: string;
   bgColor?: string;
   githubUrl: string;
-  liveUrl: string;
+  liveUrl?: string;
   stars?: number;
   forks?: number;
 }

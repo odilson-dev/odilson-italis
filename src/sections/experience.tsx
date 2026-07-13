@@ -25,7 +25,7 @@ const Experience = () => {
             start: "top 80%",
           },
         });
-      }
+      },
     );
 
     gsap.to(".timeline", {

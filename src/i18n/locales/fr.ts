@@ -68,27 +68,27 @@ export const fr: Translations = {
   },
   projects: [
     {
+      id: "not-whatsapp",
+      title: "Not WhatsApp — Messagerie temps réel avec Convex",
+      description:
+        "Une appli de chat inspirée de WhatsApp : messages 1:1 et groupes, statuts, accusés de lecture, présence et panneau d'admin — Next.js 16, Convex et Clerk.",
+      imgPath: "/images/project-not-whatsapp.png",
+      githubUrl: "https://github.com/odilson-dev/whatsapp-clone",
+      liveUrl: "https://not-whatsapp-three.vercel.app",
+      stars: 0,
+      forks: 0,
+    },
+    {
       id: "rplace-convex",
       title: "r/place × Convex — Toile collaborative en temps réel",
       description:
         "Une toile collaborative style r/place avec synchronisation instantanée via Convex — requêtes réactives, mutations groupées et UI optimiste sur Next.js 16 & React 19.",
       imgPath: "/images/project-rplace-convex.png",
+
       githubUrl: "https://github.com/odilson-dev/rpkace-convex",
       liveUrl: "https://rplace-convex-lime.vercel.app/",
       stars: 0,
       forks: 0,
-    },
-    {
-      id: "library",
-      title: "Plateforme de gestion de bibliothèque",
-      description:
-        "Un système complet de gestion de bibliothèque construit avec des technologies web modernes.",
-      imgPath: "/images/project2.png",
-      bgColor: "#FFEFDB",
-      githubUrl: "https://github.com/odilson-dev/library-platform",
-      liveUrl: "https://library-demo.com",
-      stars: 85,
-      forks: 22,
     },
     {
       id: "yc-directory",
@@ -137,6 +137,19 @@ export const fr: Translations = {
         "Développement et maintenance des fonctionnalités de l'application web CreaticsHub.",
         "Collaboration étroite avec les designers UI/UX pour des expériences utilisateur fluides.",
         "Optimisation des applications web pour une vitesse et une évolutivité maximales.",
+      ],
+    },
+    {
+      review:
+        "Sur AGRONOU, Odilson a été un véritable atout. Son sens des responsabilités ressort : il vise les résultats, pas seulement les tâches. Il creuse le pourquoi, pose des questions pertinentes sur les défis en Haïti et dans les Caraïbes, et construit pour les vrais besoins des utilisateurs.",
+      imgPath: "/images/logos/nou-logo.svg",
+      logoPath: "/images/logos/nou-logo.svg",
+      title: "Développeur Full-Stack · AGRONOU (NOU Marketplace)",
+      date: "Juin 2026 - Présent",
+      responsibilities: [
+        "Conception des tableaux de bord admin et vendeur pour NOU — marketplace multi-vendeurs pour les PME haïtiennes (Next.js, Convex, Clerk).",
+        "Livraison de la gestion produits, de la vérification des entreprises et des parcours multi-devises sur le web et l'app Expo.",
+        "Intégration des e-mails transactionnels (Resend), de la sync auth et des flux marketplace liés aux paiements (Stripe, MonCash, PayPal).",
       ],
     },
   ],

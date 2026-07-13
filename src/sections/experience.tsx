@@ -25,7 +25,7 @@ const Experience = () => {
             start: "top 80%",
           },
         });
-      }
+      },
     );
 
     gsap.to(".timeline", {
@@ -82,11 +82,18 @@ const Experience = () => {
                       <div className="gradient-line w-1 h-full" />
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                      <div className="timeline-logo">
+                      <div
+                        className="timeline-logo"
+                        style={
+                          card.logoBgColor
+                            ? { backgroundColor: card.logoBgColor }
+                            : undefined
+                        }
+                      >
                         <img
                           src={card.logoPath}
                           alt="logo"
-                          className="h-12 w-12"
+                          className="h-12 w-12 object-contain"
                         />
                       </div>
                       <div>

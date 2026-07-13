@@ -5,13 +5,15 @@ import {
   type MouseEvent,
   type PointerEvent,
 } from "react";
+import { useMediaQuery } from "react-responsive";
 import GlowCard from "../components/GlowCard";
 import TitleHeader from "../components/TitleHeader";
 import type { Testimonial } from "../constants/types";
 import { useLocale } from "../i18n/LocaleContext";
 
 const HOLD_DELAY_MS = 450;
-const SET_REPEATS = 6;
+/** Two sets is enough for a seamless CSS loop; higher values explode DOM size. */
+const SET_REPEATS = 2;
 
 const splitIntoColumns = (items: Testimonial[], count: number) =>
   Array.from({ length: count }, (_, column) =>
@@ -56,6 +58,8 @@ const TestimonialCard = ({
             src={testimonial.imgPath}
             alt=""
             draggable={false}
+            loading="lazy"
+            decoding="async"
             className="size-full object-cover object-center"
           />
         </div>
@@ -157,8 +161,17 @@ const MarqueeColumn = ({
 const Testimonials = () => {
   const { t } = useLocale();
   const testimonials = t.testimonials.items;
-  const columns2 = splitIntoColumns(testimonials, 2);
-  const columns3 = splitIntoColumns(testimonials, 3);
+  const isLg = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isMd = useMediaQuery({ query: "(min-width: 768px)" });
+
+  const columnCount = isLg ? 3 : isMd ? 2 : 1;
+  const columns = splitIntoColumns(testimonials, columnCount);
+  const directions: Array<"up" | "down"> =
+    columnCount === 1
+      ? ["up"]
+      : columnCount === 2
+        ? ["up", "down"]
+        : ["up", "down", "up"];
 
   return (
     <section id="testimonials" className="flex-center section-padding">
@@ -167,43 +180,23 @@ const Testimonials = () => {
 
         <div className="mt-10 sm:mt-16">
           <div className="testimonials-marquee-viewport h-[clamp(560px,75vh,960px)] overflow-hidden">
-            <div className="h-full min-h-0 md:hidden">
-              <MarqueeColumn
-                items={testimonials}
-                direction="up"
-                columnIndex={0}
-              />
-            </div>
-
-            <div className="hidden h-full min-h-0 md:grid md:grid-cols-2 lg:hidden md:gap-5 *:min-h-0">
-              <MarqueeColumn
-                items={columns2[0]}
-                direction="up"
-                columnIndex={0}
-              />
-              <MarqueeColumn
-                items={columns2[1]}
-                direction="down"
-                columnIndex={1}
-              />
-            </div>
-
-            <div className="hidden h-full min-h-0 lg:grid lg:grid-cols-3 lg:gap-6 *:min-h-0">
-              <MarqueeColumn
-                items={columns3[0]}
-                direction="up"
-                columnIndex={0}
-              />
-              <MarqueeColumn
-                items={columns3[1]}
-                direction="down"
-                columnIndex={1}
-              />
-              <MarqueeColumn
-                items={columns3[2]}
-                direction="up"
-                columnIndex={2}
-              />
+            <div
+              className={`h-full min-h-0 ${
+                columnCount === 1
+                  ? ""
+                  : columnCount === 2
+                    ? "grid grid-cols-2 gap-5 *:min-h-0"
+                    : "grid grid-cols-3 gap-6 *:min-h-0"
+              }`}
+            >
+              {columns.map((items, index) => (
+                <MarqueeColumn
+                  key={index}
+                  items={items}
+                  direction={directions[index] ?? "up"}
+                  columnIndex={index}
+                />
+              ))}
             </div>
           </div>
         </div>

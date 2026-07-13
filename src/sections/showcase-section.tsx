@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 const AppShowcase = () => {
   const { t } = useLocale();
   const sectionRef = useRef(null);
-  const rplaceConvexRef = useRef(null);
-  const libraryRef = useRef(null);
-  const ycDirectoryRef = useRef(null);
+  const featuredRef = useRef(null);
+  const secondRef = useRef(null);
+  const thirdRef = useRef(null);
 
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
@@ -24,11 +24,7 @@ const AppShowcase = () => {
       { opacity: 1, duration: 1.5 }
     );
 
-    const cards = [
-      rplaceConvexRef.current,
-      libraryRef.current,
-      ycDirectoryRef.current,
-    ];
+    const cards = [featuredRef.current, secondRef.current, thirdRef.current];
 
     cards.forEach((card, index) => {
       gsap.fromTo(
@@ -71,16 +67,18 @@ const AppShowcase = () => {
           <Github className="w-5 h-5" />
           {t.showcase.github}
         </a>
-        <a
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-6 py-3 bg-zinc-800 text-white rounded-lg font-semibold hover:bg-zinc-700 transition-all duration-300 transform hover:scale-105"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <ExternalLink className="w-5 h-5" />
-          {t.showcase.liveView}
-        </a>
+        {project.liveUrl ? (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 bg-zinc-800 text-white rounded-lg font-semibold hover:bg-zinc-700 transition-all duration-300 transform hover:scale-105"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ExternalLink className="w-5 h-5" />
+            {t.showcase.liveView}
+          </a>
+        ) : null}
       </div>
     );
   };
@@ -92,13 +90,13 @@ const AppShowcase = () => {
       <div className="w-full">
         <TitleHeader title={t.showcase.title} sub={t.showcase.sub} />
         <div className="showcaselayout mt-12">
-          <div ref={rplaceConvexRef} className="first-project-wrapper">
+          <div ref={featuredRef} className="first-project-wrapper">
             <div
               className="image-wrapper cursor-pointer"
-              onClick={() => handleProjectClick("rplace-convex")}
+              onClick={() => handleProjectClick(first.id)}
             >
               <img src={first.imgPath} alt={first.title} />
-              {renderProjectButtons("rplace-convex")}
+              {renderProjectButtons(first.id)}
             </div>
             <div className="text-content">
               <h2>{first.title}</h2>
@@ -119,15 +117,15 @@ const AppShowcase = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div
               className="project cursor-pointer"
-              ref={libraryRef}
-              onClick={() => handleProjectClick("library")}
+              ref={secondRef}
+              onClick={() => handleProjectClick(second.id)}
             >
               <div
                 className="image-wrapper relative"
                 style={{ backgroundColor: second.bgColor }}
               >
                 <img src={second.imgPath} alt={second.title} />
-                {renderProjectButtons("library")}
+                {renderProjectButtons(second.id)}
               </div>
               <h2>{second.title}</h2>
               <div className="flex items-center gap-4 mt-1">
@@ -144,15 +142,15 @@ const AppShowcase = () => {
 
             <div
               className="project cursor-pointer"
-              ref={ycDirectoryRef}
-              onClick={() => handleProjectClick("yc-directory")}
+              ref={thirdRef}
+              onClick={() => handleProjectClick(third.id)}
             >
               <div
                 className="image-wrapper relative"
                 style={{ backgroundColor: third.bgColor }}
               >
                 <img src={third.imgPath} alt={third.title} />
-                {renderProjectButtons("yc-directory")}
+                {renderProjectButtons(third.id)}
               </div>
               <h2>{third.title}</h2>
               <div className="flex items-center gap-4 mt-1">

@@ -67,27 +67,27 @@ export const en: Translations = {
   },
   projects: [
     {
+      id: "not-whatsapp",
+      title: "Not WhatsApp — Real-Time Messaging with Convex",
+      description:
+        "A WhatsApp-inspired chat app with 1:1 & group messaging, statuses, read receipts, presence, and an admin moderation panel — built with Next.js 16, Convex, and Clerk.",
+      imgPath: "/images/project-not-whatsapp.png",
+      githubUrl: "https://github.com/odilson-dev/whatsapp-clone",
+      liveUrl: "https://not-whatsapp-three.vercel.app",
+      stars: 0,
+      forks: 0,
+    },
+    {
       id: "rplace-convex",
       title: "r/place × Convex — Real-Time Collaborative Pixel Canvas",
       description:
         "A multiplayer r/place-style canvas with instant sync powered by Convex—reactive queries, batched mutations, and optimistic UI on Next.js 16 & React 19.",
       imgPath: "/images/project-rplace-convex.png",
+
       githubUrl: "https://github.com/odilson-dev/rpkace-convex",
       liveUrl: "https://rplace-convex-lime.vercel.app/",
       stars: 0,
       forks: 0,
-    },
-    {
-      id: "library",
-      title: "The Library Management Platform",
-      description:
-        "A comprehensive library management system built with modern web technologies.",
-      imgPath: "/images/project2.png",
-      bgColor: "#FFEFDB",
-      githubUrl: "https://github.com/odilson-dev/library-platform",
-      liveUrl: "https://library-demo.com",
-      stars: 85,
-      forks: 22,
     },
     {
       id: "yc-directory",
@@ -135,6 +135,20 @@ export const en: Translations = {
         "Developed and maintained user-facing features for the CreaticsHub WebApp.",
         "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
         "Optimized web applications for maximum speed and scalability.",
+      ],
+    },
+    {
+      review:
+        "On AGRONOU, Odilson has been a genuine asset. His sense of ownership stands out—he owns outcomes, not just tasks. He digs into the why, asks sharp questions about real-world challenges in Haiti and the Caribbean, and builds for users' real needs.",
+      imgPath: "/images/logos/nou-logo.svg",
+      logoPath: "/images/logos/nou-logo.svg",
+      logoBgColor: "#F7F3EB",
+      title: "Full-Stack Developer · AGRONOU (NOU Marketplace)",
+      date: "May 2026 - Present",
+      responsibilities: [
+        "Built admin and seller dashboards for NOU — multi-vendor marketplace for Haitian SMEs (Next.js, Convex, Clerk).",
+        "Shipped product management, business verification, and multi-currency storefront flows across web and Expo mobile.",
+        "Integrated transactional email (Resend), auth sync, and payment-related marketplace workflows (Stripe, MonCash, PayPal).",
       ],
     },
   ],

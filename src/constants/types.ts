@@ -69,6 +69,8 @@ export interface ExpCard {
   review: string;
   imgPath: string;
   logoPath: string;
+  /** Optional background color for the timeline logo circle */
+  logoBgColor?: string;
   title: string;
   date: string;
   responsibilities: string[];

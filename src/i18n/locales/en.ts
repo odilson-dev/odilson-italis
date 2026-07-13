@@ -142,6 +142,7 @@ export const en: Translations = {
         "On AGRONOU, Odilson has been a genuine asset. His sense of ownership stands out—he owns outcomes, not just tasks. He digs into the why, asks sharp questions about real-world challenges in Haiti and the Caribbean, and builds for users' real needs.",
       imgPath: "/images/logos/nou-logo.svg",
       logoPath: "/images/logos/nou-logo.svg",
+      logoBgColor: "#F7F3EB",
       title: "Full-Stack Developer · AGRONOU (NOU Marketplace)",
       date: "May 2026 - Present",
       responsibilities: [

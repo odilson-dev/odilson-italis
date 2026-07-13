@@ -144,6 +144,7 @@ export const fr: Translations = {
         "Sur AGRONOU, Odilson a été un véritable atout. Son sens des responsabilités ressort : il vise les résultats, pas seulement les tâches. Il creuse le pourquoi, pose des questions pertinentes sur les défis en Haïti et dans les Caraïbes, et construit pour les vrais besoins des utilisateurs.",
       imgPath: "/images/logos/nou-logo.svg",
       logoPath: "/images/logos/nou-logo.svg",
+      logoBgColor: "#F7F3EB",
       title: "Développeur Full-Stack · AGRONOU (NOU Marketplace)",
       date: "Juin 2026 - Présent",
       responsibilities: [

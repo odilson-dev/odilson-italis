@@ -17,6 +17,12 @@ body {
 
 section {
   width: 100dvw;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+#hero {
+  content-visibility: visible;
 }
 
 @theme {
@@ -59,12 +65,10 @@ section {
 
   .testimonial-marquee-track-up {
     animation: testimonial-marquee-down 220s linear infinite both reverse;
-    will-change: transform;
   }
 
   .testimonial-marquee-track-down {
     animation: testimonial-marquee-down 220s linear infinite both;
-    will-change: transform;
   }
 
   .testimonial-marquee-track-paused {
@@ -518,7 +522,6 @@ section {
   border-radius: 12px;
   border: 2px solid transparent;
   background: var(--gradient);
-  background-attachment: fixed;
   mask:
     linear-gradient(#0000, #0000),
     conic-gradient(
@@ -531,9 +534,10 @@ section {
   mask-clip: padding-box, border-box;
   opacity: 0;
   transition: 0.5s ease;
+  pointer-events: none;
 }
 
-.glow {
+  .glow {
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -541,8 +545,14 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(10px);
-  filter: saturate(200);
+  /* Blur only on hover via .card:hover .glow — continuous blur is expensive */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .glow {
+  opacity: 1;
+  filter: blur(10px) saturate(1.5);
 }
 
 .card:hover::before {

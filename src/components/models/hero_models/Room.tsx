@@ -52,7 +52,10 @@ type GLTFResult = GLTF & {
   };
 };
 
-export function Room(props: JSX.IntrinsicElements["group"]) {
+export function Room({
+  enableBloom = true,
+  ...props
+}: JSX.IntrinsicElements["group"] & { enableBloom?: boolean }) {
   const { nodes, materials } = useGLTF(
     "/models/optimized-room.glb"
   ) as unknown as GLTFResult;
@@ -117,15 +120,17 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
 
   return (
     <group {...props} dispose={null}>
-      <EffectComposer>
-        <SelectiveBloom
-          selection={screensRef}
-          intensity={1.5} // Strength of the bloom
-          luminanceThreshold={0.2} // Minimum luminance needed
-          luminanceSmoothing={0.9} // Smooth transition
-          blendFunction={BlendFunction.ADD} // How it blends
-        />
-      </EffectComposer>
+      {enableBloom ? (
+        <EffectComposer multisampling={0} enableNormalPass={false}>
+          <SelectiveBloom
+            selection={screensRef}
+            intensity={1.5}
+            luminanceThreshold={0.2}
+            luminanceSmoothing={0.9}
+            blendFunction={BlendFunction.ADD}
+          />
+        </EffectComposer>
+      ) : null}
       <mesh
         geometry={nodes._________6_blinn1_0.geometry}
         material={curtainMaterial}

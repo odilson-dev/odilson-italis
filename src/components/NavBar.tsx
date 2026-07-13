@@ -11,10 +11,11 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
+      setScrolled((prev) => (prev === isScrolled ? prev : isScrolled));
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,6 +27,9 @@ const NavBar = () => {
           <img
             src="./images/profile.png"
             alt="Odilson Italis"
+            width={40}
+            height={40}
+            decoding="async"
             className="w-10 h-10 rounded-full object-cover border border-white-50"
           />
           <div className="flex flex-col">

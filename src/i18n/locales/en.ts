@@ -83,7 +83,7 @@ export const en: Translations = {
       description:
         "A multiplayer r/place-style canvas with instant sync powered by Convex—reactive queries, batched mutations, and optimistic UI on Next.js 16 & React 19.",
       imgPath: "/images/project-rplace-convex.png",
-
+      bgColor: "#FFF5E1",
       githubUrl: "https://github.com/odilson-dev/rpkace-convex",
       liveUrl: "https://rplace-convex-lime.vercel.app/",
       stars: 0,

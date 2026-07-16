@@ -84,7 +84,7 @@ export const fr: Translations = {
       description:
         "Une toile collaborative style r/place avec synchronisation instantanée via Convex — requêtes réactives, mutations groupées et UI optimiste sur Next.js 16 & React 19.",
       imgPath: "/images/project-rplace-convex.png",
-
+      bgColor: "#FFF5E1",
       githubUrl: "https://github.com/odilson-dev/rpkace-convex",
       liveUrl: "https://rplace-convex-lime.vercel.app/",
       stars: 0,

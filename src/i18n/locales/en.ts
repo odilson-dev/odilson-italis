@@ -26,11 +26,11 @@ export const en: Translations = {
     hireMe: "Hire me",
   },
   navLinks: [
-    { name: "About me", link: "#about" },
-    { name: "Works", link: "#work" },
+    { name: "About", link: "#about" },
+    { name: "Work", link: "#work" },
     { name: "Experience", link: "#experience" },
     { name: "Skills", link: "#skills" },
-    { name: "Testimonials", link: "#testimonials" },
+    { name: "Certifications", link: "#certifications" },
     { name: "Community", link: "#community" },
   ],
   hero: {
@@ -222,6 +222,12 @@ export const en: Translations = {
         imgPath: "/images/client6.png",
       },
     ],
+  },
+  certifications: {
+    title: "Certifications & Achievements",
+    sub: "📜 Professional Recognition",
+    viewCertificate: "View Certificate",
+    viewLarger: "View larger",
   },
   community: {
     title: "Community & Open Source",

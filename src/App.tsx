@@ -1,6 +1,7 @@
 import AnimatedCounter from "./components/AnimatedCounter";
 import NavBar from "./components/NavBar";
 import About from "./sections/About";
+import Certifications from "./sections/Certifications";
 import Community from "./sections/Community";
 import Contact from "./sections/Contact";
 import Experience from "./sections/experience";
@@ -26,7 +27,7 @@ function App() {
       <Experience />
       <TechStack />
       <Testimonials />
-      {/* <Certifications /> */}
+      <Certifications />
       <Community />
       <Contact />
       <Footer />

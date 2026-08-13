@@ -63,7 +63,7 @@ const ImageLightbox = ({
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-8"
       role="dialog"
       aria-modal="true"
       aria-label={t.lightbox.preview}

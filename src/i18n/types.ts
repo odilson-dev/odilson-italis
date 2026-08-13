@@ -62,6 +62,12 @@ export interface Translations {
     sub: string;
     items: Testimonial[];
   };
+  certifications: {
+    title: string;
+    sub: string;
+    viewCertificate: string;
+    viewLarger: string;
+  };
   community: {
     title: string;
     sub: string;

@@ -185,7 +185,7 @@ section {
   }
 
   .navbar {
-    @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
+    @apply fixed w-full left-1/2 py-4 xl:py-5 px-5 md:px-10 xl:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
     &.scrolled {
       @apply top-0 bg-black;
@@ -196,21 +196,21 @@ section {
     }
 
     .inner {
-      @apply mx-auto flex items-center justify-between;
+      @apply mx-auto flex items-center justify-between gap-3 xl:gap-6;
     }
 
     .logo {
-      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+      @apply text-white-50 font-semibold transition-transform duration-300 hover:scale-105 shrink-0;
     }
 
     nav.desktop {
-      @apply hidden lg:flex items-center;
+      @apply hidden lg:flex items-center min-w-0;
 
       ul {
-        @apply flex space-x-8;
+        @apply flex items-center gap-x-3 xl:gap-x-5 2xl:gap-x-7;
 
         li {
-          @apply text-white-50 relative;
+          @apply text-white-50 relative text-sm xl:text-base whitespace-nowrap;
 
           span {
             @apply transition-colors duration-300 hover:text-white;
@@ -223,14 +223,30 @@ section {
       }
     }
 
+    .mobile-menu {
+      @apply absolute top-full left-0 right-0 mt-2 mx-5 rounded-2xl border border-white/10 bg-black/95 backdrop-blur-md p-5 shadow-2xl;
+
+      nav ul {
+        @apply flex flex-col gap-1;
+
+        a {
+          @apply block rounded-lg px-3 py-3 text-white-50 hover:text-white hover:bg-white/5 transition-colors;
+        }
+      }
+    }
+
+    .mobile-menu-actions {
+      @apply mt-4 pt-4 border-t border-white/10 flex flex-col gap-3;
+    }
+
     .contact-btn {
-      @apply flex;
+      @apply flex shrink-0;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
+        @apply px-3 xl:px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300 text-sm xl:text-base;
 
         span {
-          @apply group-hover:text-white transition-colors duration-300;
+          @apply group-hover:text-white transition-colors duration-300 whitespace-nowrap;
         }
       }
     }

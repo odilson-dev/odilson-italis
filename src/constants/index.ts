@@ -62,25 +62,11 @@ const expLogos: ExpLogo[] = [
 
 const certifications: Certification[] = [
   {
-    title: "Full Stack Web Development",
-    issuer: "FreeCodeCamp",
-    date: "2023",
-    link: "https://freecodecamp.org/certification/odilson/full-stack",
-    imgPath: "/images/cert1.png",
-  },
-  {
-    title: "React Native Specialist",
-    issuer: "Meta",
-    date: "2024",
-    link: "https://coursera.org/verify/react-native-specialist",
-    imgPath: "/images/cert2.png",
-  },
-  {
-    title: "Advanced TypeScript",
-    issuer: "Frontend Masters",
-    date: "2024",
-    link: "https://frontendmasters.com/certificates/typescript",
-    imgPath: "/images/cert3.png",
+    title: "Award-Winning Marketing Websites",
+    issuer: "Master.dev (Formerly Frontend Masters)",
+    date: "2026",
+    link: "https://static.frontendmasters.com/ud/c/6766641c13/SzzjuMETMd/winning-websites-masterdev.pdf",
+    imgPath: "/images/cert_1.png",
   },
 ];
 
@@ -107,10 +93,4 @@ const socialImgs: SocialLink[] = [
   },
 ];
 
-export {
-  certifications,
-  expLogos,
-  logoIconsList,
-  socialImgs,
-  techStackIcons,
-};
+export { certifications, expLogos, logoIconsList, socialImgs, techStackIcons };

@@ -30,7 +30,7 @@ export const fr: Translations = {
     { name: "Projets", link: "#work" },
     { name: "Expérience", link: "#experience" },
     { name: "Compétences", link: "#skills" },
-    { name: "Témoignages", link: "#testimonials" },
+    { name: "Certifications", link: "#certifications" },
     { name: "Communauté", link: "#community" },
   ],
   hero: {
@@ -232,6 +232,12 @@ export const fr: Translations = {
         imgPath: "/images/client6.png",
       },
     ],
+  },
+  certifications: {
+    title: "Certifications & Réalisations",
+    sub: "📜 Reconnaissance professionnelle",
+    viewCertificate: "Voir le certificat",
+    viewLarger: "Voir en grand",
   },
   community: {
     title: "Communauté & Open Source",

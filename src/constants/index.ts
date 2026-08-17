@@ -68,6 +68,13 @@ const certifications: Certification[] = [
     link: "https://static.frontendmasters.com/ud/c/6766641c13/SzzjuMETMd/winning-websites-masterdev.pdf",
     imgPath: "/images/cert_1.png",
   },
+  {
+    title: "Deploying Web Applications on AWS, v3",
+    issuer: "Master.dev (Formerly Frontend Masters)",
+    date: "2026",
+    link: "https://static.frontendmasters.com/ud/c/6766641c13/QVoCclqyWg/aws-v3-masterdev.pdf",
+    imgPath: "/images/cert_2.png",
+  },
 ];
 
 const socialImgs: SocialLink[] = [

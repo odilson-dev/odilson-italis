@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Award, ExternalLink, ZoomIn } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import ImageLightbox from "../components/ImageLightbox";
 import TitleHeader from "../components/TitleHeader";
 import { certifications } from "../constants";
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Certifications = () => {
   const { t } = useLocale();
+  const sectionRef = useRef<HTMLElement>(null);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const lightboxPhotos = useMemo(
@@ -26,21 +27,52 @@ const Certifications = () => {
     [],
   );
 
-  useGSAP(() => {
-    gsap.from(".cert-card", {
-      opacity: 0,
-      scale: 0.9,
-      duration: 0.8,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: "#certifications",
-        start: "top 80%",
-      },
-    });
-  }, []);
+  useGSAP(
+    () => {
+      const cards = gsap.utils.toArray<HTMLElement>(".cert-card");
+      if (!cards.length) return;
+
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 36, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out",
+          // Keep cards visible until ScrollTrigger actually starts the tween
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none",
+            once: true,
+            invalidateOnRefresh: true,
+          },
+        },
+      );
+
+      // Content above this section (images / 3D) shifts layout — refresh triggers
+      const refresh = () => ScrollTrigger.refresh();
+      window.addEventListener("load", refresh);
+      const timeoutId = window.setTimeout(refresh, 400);
+
+      return () => {
+        window.removeEventListener("load", refresh);
+        window.clearTimeout(timeoutId);
+      };
+    },
+    { scope: sectionRef },
+  );
 
   return (
-    <section id="certifications" className="section-padding">
+    <section
+      id="certifications"
+      ref={sectionRef}
+      className="section-padding"
+    >
       <div className="container mx-auto px-5 md:px-20">
         <TitleHeader title={t.certifications.title} sub={t.certifications.sub} />
 

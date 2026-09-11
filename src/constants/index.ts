@@ -62,11 +62,26 @@ const expLogos: ExpLogo[] = [
 
 const certifications: Certification[] = [
   {
+    title: "Introduction to Front-End Development",
+    issuer: "Meta · Coursera",
+    date: "2026",
+    link: "https://www.coursera.org/account/accomplishments/records/ATRC28J9OATE",
+    imgPath: "/images/cert_3.png",
+  },
+
+  {
     title: "Award-Winning Marketing Websites",
     issuer: "Master.dev (Formerly Frontend Masters)",
     date: "2026",
     link: "https://static.frontendmasters.com/ud/c/6766641c13/SzzjuMETMd/winning-websites-masterdev.pdf",
     imgPath: "/images/cert_1.png",
+  },
+  {
+    title: "Deploying Web Applications on AWS, v3",
+    issuer: "Master.dev (Formerly Frontend Masters)",
+    date: "2026",
+    link: "https://static.frontendmasters.com/ud/c/6766641c13/QVoCclqyWg/aws-v3-masterdev.pdf",
+    imgPath: "/images/cert_2.png",
   },
 ];
 

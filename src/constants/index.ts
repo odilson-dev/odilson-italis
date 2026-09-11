@@ -62,6 +62,14 @@ const expLogos: ExpLogo[] = [
 
 const certifications: Certification[] = [
   {
+    title: "Introduction to Front-End Development",
+    issuer: "Meta · Coursera",
+    date: "2026",
+    link: "https://www.coursera.org/account/accomplishments/records/ATRC28J9OATE",
+    imgPath: "/images/cert_3.png",
+  },
+
+  {
     title: "Award-Winning Marketing Websites",
     issuer: "Master.dev (Formerly Frontend Masters)",
     date: "2026",

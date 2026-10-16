@@ -116,6 +116,7 @@ export interface Project {
   liveUrl?: string;
   stars?: number;
   forks?: number;
+  stack: string[];
 }
 
 /**

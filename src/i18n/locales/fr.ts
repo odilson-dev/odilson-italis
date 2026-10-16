@@ -153,6 +153,19 @@ export const fr: Translations = {
         "Intégration des e-mails transactionnels (Resend), de la sync auth et des flux marketplace liés aux paiements (Stripe, MonCash, PayPal).",
       ],
     },
+    {
+      review:
+        "La CCI Sud Haïti dispose d'un site public pour la chambre : membres, publications, événements, galerie et adhésion, en français, en kreyòl et en anglais.",
+      imgPath: "/images/logos/ccis-wordmark.png",
+      logoPath: "/images/logos/ccis-mark.png",
+      title: "Développeur Full-Stack · CCI Sud Haïti",
+      date: "Septembre 2026 - Présent",
+      responsibilities: [
+        "Conception du site public de la Chambre de Commerce et d'Industrie du Sud (Next.js, Convex, Tailwind).",
+        "Livraison des parcours adhésion, publications, événements et galerie, plus les formulaires de contact, de candidature et d'infolettre.",
+        "Site en français, kreyòl et anglais, avec SEO et sitemap.",
+      ],
+    },
   ],
   techStack: {
     title: "Comment je peux contribuer & mes compétences clés",

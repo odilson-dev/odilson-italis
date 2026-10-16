@@ -151,6 +151,19 @@ export const en: Translations = {
         "Integrated transactional email (Resend), auth sync, and payment-related marketplace workflows (Stripe, MonCash, PayPal).",
       ],
     },
+    {
+      review:
+        "CCI Sud Haïti now has a public site for the chamber: members, publications, events, gallery, and membership, in French, Haitian Creole, and English.",
+      imgPath: "/images/logos/ccis-wordmark.png",
+      logoPath: "/images/logos/ccis-mark.png",
+      title: "Full-Stack Developer · CCI Sud Haïti",
+      date: "September 2026 - Present",
+      responsibilities: [
+        "Built the public website for the Chambre de Commerce et d'Industrie du Sud (Next.js, Convex, Tailwind).",
+        "Shipped membership, publications, events, gallery, and forms for contact, applications, and the newsletter.",
+        "Localized the site in French, Haitian Creole, and English, with SEO and a sitemap.",
+      ],
+    },
   ],
   techStack: {
     title: "How I Can Contribute & My Key Skills",

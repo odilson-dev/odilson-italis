@@ -55,10 +55,10 @@ export const fr: Translations = {
     viewWork: "Voir mes projets",
   },
   counterItems: [
-    { value: 15, suffix: "+", label: "Années d'expérience" },
-    { value: 200, suffix: "+", label: "Clients satisfaits" },
-    { value: 108, suffix: "+", label: "Projets réalisés" },
-    { value: 90, suffix: "%", label: "Taux de fidélisation" },
+    { value: 3, suffix: "+", label: "Années d'expérience" },
+    { value: 6, suffix: "+", label: "Clients satisfaits" }, // Joberno, Cosy, Yuri, Massimo, Mythel,
+    { value: 10, suffix: "+", label: "Projets réalisés" },
+    { value: 100, suffix: "%", label: "Taux de fidélisation" },
   ],
   showcase: {
     title: "Projets en vedette",
@@ -77,7 +77,14 @@ export const fr: Translations = {
       liveUrl: "https://not-whatsapp-three.vercel.app",
       stars: 0,
       forks: 0,
-      stack: ["Next.js", "React", "Convex", "Clerk", "Tailwind CSS", "TypeScript"],
+      stack: [
+        "Next.js",
+        "React",
+        "Convex",
+        "Clerk",
+        "Tailwind CSS",
+        "TypeScript",
+      ],
     },
     {
       id: "rplace-convex",
@@ -98,7 +105,7 @@ export const fr: Translations = {
       description:
         "Un site de prévisions météo pour n'importe quelle ville, via l'API OpenWeatherMap : température, conditions, humidité et vitesse du vent.",
       imgPath: "/images/project-weather-app.png",
-      bgColor: "#000000",
+
       githubUrl: "https://github.com/odilson-dev/weather-app",
       liveUrl: "https://odilson-dev.github.io/weather-app/",
       stars: 1,
@@ -228,9 +235,9 @@ export const fr: Translations = {
       },
       {
         name: "Cosy Joseph",
-        role: "Directrice de la transformation numérique | Constructeur d'écosystème",
+        role: "Présidente de la Chambre de Commerce et d'Industrie du Sud d'Haiti",
         review:
-          "Sur AGRONOU, Odilson a été un véritable atout. Son sens des responsabilités ressort : il n'attend pas qu'on lui dise quoi développer ; il vise les résultats, pas seulement les tâches. Il creuse le « pourquoi », pose des questions pertinentes sur les défis concrets en Haïti et dans les Caraïbes, et conçoit pour les vrais besoins des utilisateurs, pas seulement ce qui est techniquement pratique. L'un des ingénieurs les plus naturellement curieux avec lesquels j'ai travaillé, il assimile vite les nouveaux outils, cherche le contexte business et marché au-delà de son domaine, et aligne ses décisions techniques sur la vision d'ensemble. Apprentissage rapide, curiosité sincère, sens des responsabilités : je l'aurais dans toute équipe qui construit du nouveau.",
+          "Odilson a réalisé le site public de la Chambre de Commerce et d'Industrie du Sud. Il a pris le temps de comprendre comment la chambre accompagne les entreprises du Grand Sud, puis il a livré un site que nos membres et partenaires peuvent vraiment utiliser : qui nous sommes, nos membres, les publications, les événements et comment adhérer. Le site est disponible en français, en créole haïtien et en anglais. Il est sérieux, attentif, et il livre.",
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
@@ -241,11 +248,11 @@ export const fr: Translations = {
         imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
-        name: "Albert Flores",
-        role: "Directeur technique",
+        name: "Simeus Mythel",
+        role: "PDG de FinansIA",
         review:
           "Odilson a été un plaisir à travailler. Il a parfaitement compris nos besoins et livré un site qui a dépassé nos attentes. Ses compétences en front-end et back-end sont excellentes.",
-        imgPath: "/images/client6.png",
+        imgPath: "images/profile-pictures/mythel.png",
       },
     ],
   },

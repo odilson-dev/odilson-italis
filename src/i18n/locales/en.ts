@@ -54,10 +54,10 @@ export const en: Translations = {
     viewWork: "View My Work",
   },
   counterItems: [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 3, suffix: "+", label: "Years of Experience" },
+    { value: 6, suffix: "+", label: "Satisfied Clients" }, // Joberno, Cosy, Yuri, Massimo, Mythel,
+    { value: 10, suffix: "+", label: "Completed Projects" },
+    { value: 100, suffix: "%", label: "Client Retention Rate" },
   ],
   showcase: {
     title: "Featured Projects",
@@ -76,7 +76,14 @@ export const en: Translations = {
       liveUrl: "https://not-whatsapp-three.vercel.app",
       stars: 0,
       forks: 0,
-      stack: ["Next.js", "React", "Convex", "Clerk", "Tailwind CSS", "TypeScript"],
+      stack: [
+        "Next.js",
+        "React",
+        "Convex",
+        "Clerk",
+        "Tailwind CSS",
+        "TypeScript",
+      ],
     },
     {
       id: "rplace-convex",
@@ -97,7 +104,7 @@ export const en: Translations = {
       description:
         "A weather forecast site for any city, using the OpenWeatherMap API: temperature, conditions, humidity, and wind speed.",
       imgPath: "/images/project-weather-app.png",
-      bgColor: "#000000",
+
       githubUrl: "https://github.com/odilson-dev/weather-app",
       liveUrl: "https://odilson-dev.github.io/weather-app/",
       stars: 1,
@@ -219,9 +226,9 @@ export const en: Translations = {
       },
       {
         name: "Cosy Joseph",
-        role: "Digital Transformation Executive | Ecosystem Builder",
+        role: "President of the Chamber of Commerce and Industry of the Southern of Haiti",
         review:
-          "On AGRONOU, Odilson has been a genuine asset. His sense of ownership stands out—he doesn't wait to be told what to build; he owns outcomes, not just tasks. He digs into the \"why,\" asks sharp questions about real-world challenges in Haiti and the Caribbean, and builds for users' real needs, not just technical convenience. One of the most naturally curious engineers I've worked with, he learns new tools fast, seeks business and market context beyond his lane, and aligns technical decisions with the bigger picture. Fast learner, genuine curiosity, real ownership: I'd want him on any team building something new.",
+          "Odilson built the public website of the Chamber of Commerce and Industry of the South. He took the time to understand how the chamber serves businesses in southern Haiti, then delivered a site our members and partners can actually use: who we are, our members, publications, events, and how to join. The site is available in French, Haitian Creole, and English. He is serious, attentive, and he delivers.",
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
@@ -232,11 +239,11 @@ export const en: Translations = {
         imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
-        name: "Albert Flores",
-        role: "CTO",
+        name: "Simeus Myhel",
+        role: "CEO of FinansIA",
         review:
           "Odilson was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-        imgPath: "/images/client6.png",
+        imgPath: "images/profile-pictures/mythel.png",
       },
     ],
   },

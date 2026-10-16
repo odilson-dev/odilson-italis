@@ -45,9 +45,10 @@ export const fr: Translations = {
     title: "À propos de moi",
     sub: "👨‍💻 Qui je suis",
     paragraphs: [
-      "Bonjour ! Je suis Odilson, un développeur passionné dédié à la création d'expériences numériques exceptionnelles. Avec une solide base en technologies web et mobiles, j'excelle à transformer des problèmes complexes en solutions élégantes et conviviales.",
-      "Mon parcours dans la tech est guidé par la curiosité et une envie constante d'apprendre. Que ce soit pour concevoir des interfaces front-end réactives ou architecturer des systèmes back-end robustes, j'aborde chaque projet avec un souci de qualité, de performance et d'évolutivité.",
-      "Quand je ne code pas, vous me trouverez en train d'explorer de nouvelles technologies, de contribuer à des projets open source ou de partager mes connaissances avec la communauté. Je suis aussi membre du",
+      "Je suis Odilson, développeur full-stack en Haïti. Je conçois et je construis des produits web et mobiles, du premier écran jusqu'au système qui les fait tourner.",
+      "J'ai livré des produits en production pour CreaticsHub, pour AGRONOU, une marketplace pour les entreprises haïtiennes, et pour la Chambre de Commerce et d'Industrie du Sud. Chaque mission m'a appris à écouter d'abord, puis à construire quelque chose sur lequel les gens peuvent compter.",
+      "Ce qui me tient dans ce métier, c'est le moment où un produit devient utile pour quelqu'un de réel. J'aime les problèmes difficiles, les nouveaux outils, et avancer avec d'autres développeurs. Je suis membre du",
+      "Pour la suite, je veux porter des produits plus ambitieux, continuer à grandir comme développeur full-stack, et construire des outils qui ouvrent des opportunités en Haïti et au-delà.",
     ],
     communityLink: "Coding Club Cayes",
     communitySuffix:

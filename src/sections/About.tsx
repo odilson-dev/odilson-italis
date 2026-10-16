@@ -52,18 +52,23 @@ const About = () => {
           </div>
 
           <div className="w-full md:w-1/2 flex flex-col gap-6 text-white-50 text-lg leading-relaxed">
-            <p className="about-text">{t.about.paragraphs[0]}</p>
-            <p className="about-text">{t.about.paragraphs[1]}</p>
-            <p className="about-text">
-              {t.about.paragraphs[2]}{" "}
-              <a
-                href="#community"
-                className="text-white font-bold underline-offset-2 hover:text-white-50 transition-colors"
-              >
-                {t.about.communityLink}
-              </a>
-              {t.about.communitySuffix}
-            </p>
+            {t.about.paragraphs.map((paragraph, index) => (
+              <p key={paragraph} className="about-text">
+                {paragraph}
+                {index === 2 ? (
+                  <>
+                    {" "}
+                    <a
+                      href="#community"
+                      className="text-white font-bold underline-offset-2 hover:text-white-50 transition-colors"
+                    >
+                      {t.about.communityLink}
+                    </a>
+                    {t.about.communitySuffix}
+                  </>
+                ) : null}
+              </p>
+            ))}
             <div className="about-text mt-4">
               <a
                 href="#work"

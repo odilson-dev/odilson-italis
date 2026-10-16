@@ -45,9 +45,10 @@ export const en: Translations = {
     title: "About Me",
     sub: "👨‍💻 Who I Am",
     paragraphs: [
-      "Hello! I'm Odilson, a passionate developer dedicated to building exceptional digital experiences. With a strong foundation in both web and mobile technologies, I thrive on turning complex problems into elegant, user-friendly solutions.",
-      "My journey in tech has been driven by curiosity and a relentless desire to learn. Whether it's crafting responsive front-end interfaces or architecting robust back-end systems, I approach every project with a focus on quality, performance, and scalability.",
-      "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the community. I'm also a member of",
+      "I'm Odilson, a full-stack developer from Haiti. I design and build web and mobile products, from the first screen to the system that keeps them running.",
+      "I have shipped production work for CreaticsHub, for AGRONOU, a marketplace for Haitian businesses, and for the Chamber of Commerce and Industry of the South. Each project taught me to listen first, then build something people can rely on.",
+      "What keeps me here is the moment a product becomes useful for a real person. I like hard problems, new tools, and building with other developers. I'm a member of",
+      "Next, I want to take on larger products, keep growing as a full-stack developer, and build tools that open opportunity in Haiti and beyond.",
     ],
     communityLink: "Coding Club Cayes",
     communitySuffix: ", helping grow Haiti's tech ecosystem in the south.",

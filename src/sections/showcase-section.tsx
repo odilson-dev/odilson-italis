@@ -21,7 +21,7 @@ const AppShowcase = () => {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 1.5 },
     );
 
     const cards = [featuredRef.current, secondRef.current, thirdRef.current];
@@ -42,7 +42,7 @@ const AppShowcase = () => {
             trigger: card,
             start: "top bottom-=100",
           },
-        }
+        },
       );
     });
   }, []);
@@ -83,6 +83,10 @@ const AppShowcase = () => {
     );
   };
 
+  const renderStack = (stack: string[], className: string) => (
+    <p className={className}>{stack.join(", ")}</p>
+  );
+
   const [first, second, third] = t.projects;
 
   return (
@@ -100,7 +104,9 @@ const AppShowcase = () => {
             </div>
             <div className="text-content">
               <h2>{first.title}</h2>
+
               <p className="text-white-50 md:text-xl">{first.description}</p>
+              {renderStack(first.stack, "text-sm text-white-50")}
               <div className="flex items-center gap-4 mt-2">
                 <div className="flex items-center gap-1 text-white-50 text-sm">
                   <Star className="w-4 h-4 text-yellow-500" />
@@ -128,6 +134,8 @@ const AppShowcase = () => {
                 {renderProjectButtons(second.id)}
               </div>
               <h2>{second.title}</h2>
+              <p className="mt-2 text-sm text-white-50">{second.description}</p>
+              {renderStack(second.stack, "mt-2 text-xs text-white-50")}
               <div className="flex items-center gap-4 mt-1">
                 <div className="flex items-center gap-1 text-white-50 text-xs">
                   <Star className="w-3 h-3 text-yellow-500" />
@@ -153,6 +161,8 @@ const AppShowcase = () => {
                 {renderProjectButtons(third.id)}
               </div>
               <h2>{third.title}</h2>
+              <p className="mt-2 text-sm text-white-50">{third.description}</p>
+              {renderStack(third.stack, "mt-2 text-xs text-white-50")}
               <div className="flex items-center gap-4 mt-1">
                 <div className="flex items-center gap-1 text-white-50 text-xs">
                   <Star className="w-3 h-3 text-yellow-500" />

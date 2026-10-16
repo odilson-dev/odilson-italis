@@ -45,9 +45,10 @@ export const fr: Translations = {
     title: "À propos de moi",
     sub: "👨‍💻 Qui je suis",
     paragraphs: [
-      "Bonjour ! Je suis Odilson, un développeur passionné dédié à la création d'expériences numériques exceptionnelles. Avec une solide base en technologies web et mobiles, j'excelle à transformer des problèmes complexes en solutions élégantes et conviviales.",
-      "Mon parcours dans la tech est guidé par la curiosité et une envie constante d'apprendre. Que ce soit pour concevoir des interfaces front-end réactives ou architecturer des systèmes back-end robustes, j'aborde chaque projet avec un souci de qualité, de performance et d'évolutivité.",
-      "Quand je ne code pas, vous me trouverez en train d'explorer de nouvelles technologies, de contribuer à des projets open source ou de partager mes connaissances avec la communauté. Je suis aussi membre du",
+      "Je suis Odilson, développeur full-stack en Haïti. Je conçois et je construis des produits web et mobiles, du premier écran jusqu'au système qui les fait tourner.",
+      "J'ai livré des produits en production pour CreaticsHub, pour AGRONOU, une marketplace pour les entreprises haïtiennes, et pour la Chambre de Commerce et d'Industrie du Sud. Chaque mission m'a appris à écouter d'abord, puis à construire quelque chose sur lequel les gens peuvent compter.",
+      "Ce qui me tient dans ce métier, c'est le moment où un produit devient utile pour quelqu'un de réel. J'aime les problèmes difficiles, les nouveaux outils, et avancer avec d'autres développeurs. Je suis membre du",
+      "Pour la suite, je veux porter des produits plus ambitieux, continuer à grandir comme développeur full-stack, et construire des outils qui ouvrent des opportunités en Haïti et au-delà.",
     ],
     communityLink: "Coding Club Cayes",
     communitySuffix:
@@ -55,10 +56,10 @@ export const fr: Translations = {
     viewWork: "Voir mes projets",
   },
   counterItems: [
-    { value: 15, suffix: "+", label: "Années d'expérience" },
-    { value: 200, suffix: "+", label: "Clients satisfaits" },
-    { value: 108, suffix: "+", label: "Projets réalisés" },
-    { value: 90, suffix: "%", label: "Taux de fidélisation" },
+    { value: 3, suffix: "+", label: "Années d'expérience" },
+    { value: 6, suffix: "+", label: "Clients satisfaits" }, // Joberno, Cosy, Yuri, Massimo, Mythel,
+    { value: 10, suffix: "+", label: "Projets réalisés" },
+    { value: 100, suffix: "%", label: "Taux de fidélisation" },
   ],
   showcase: {
     title: "Projets en vedette",
@@ -77,6 +78,14 @@ export const fr: Translations = {
       liveUrl: "https://not-whatsapp-three.vercel.app",
       stars: 0,
       forks: 0,
+      stack: [
+        "Next.js",
+        "React",
+        "Convex",
+        "Clerk",
+        "Tailwind CSS",
+        "TypeScript",
+      ],
     },
     {
       id: "rplace-convex",
@@ -89,18 +98,20 @@ export const fr: Translations = {
       liveUrl: "https://rplace-convex-lime.vercel.app/",
       stars: 0,
       forks: 0,
+      stack: ["Next.js", "React", "Convex", "Tailwind CSS", "TypeScript"],
     },
     {
-      id: "yc-directory",
-      title: "YC Directory — Application vitrine de startups",
+      id: "weather-app",
+      title: "Weather App",
       description:
-        "Une plateforme pour découvrir et mettre en avant des startups innovantes.",
-      imgPath: "/images/project3.png",
-      bgColor: "#FFE7EB",
-      githubUrl: "https://github.com/odilson-dev/yc-directory",
-      liveUrl: "https://yc-directory-demo.com",
-      stars: 210,
-      forks: 64,
+        "Un site de prévisions météo pour n'importe quelle ville, via l'API OpenWeatherMap : température, conditions, humidité et vitesse du vent.",
+      imgPath: "/images/project-weather-app.png",
+
+      githubUrl: "https://github.com/odilson-dev/weather-app",
+      liveUrl: "https://odilson-dev.github.io/weather-app/",
+      stars: 1,
+      forks: 0,
+      stack: ["JavaScript", "HTML", "CSS", "Webpack", "OpenWeatherMap"],
     },
   ],
   abilities: [
@@ -151,6 +162,19 @@ export const fr: Translations = {
         "Conception des tableaux de bord admin et vendeur pour NOU — marketplace multi-vendeurs pour les PME haïtiennes (Next.js, Convex, Clerk).",
         "Livraison de la gestion produits, de la vérification des entreprises et des parcours multi-devises sur le web et l'app Expo.",
         "Intégration des e-mails transactionnels (Resend), de la sync auth et des flux marketplace liés aux paiements (Stripe, MonCash, PayPal).",
+      ],
+    },
+    {
+      review:
+        "La CCI Sud Haïti dispose d'un site public pour la chambre : membres, publications, événements, galerie et adhésion, en français, en kreyòl et en anglais.",
+      imgPath: "/images/logos/ccis-wordmark.png",
+      logoPath: "/images/logos/ccis-mark.png",
+      title: "Développeur Full-Stack · CCI Sud Haïti",
+      date: "Septembre 2026 - Présent",
+      responsibilities: [
+        "Conception du site public de la Chambre de Commerce et d'Industrie du Sud (Next.js, Convex, Tailwind).",
+        "Livraison des parcours adhésion, publications, événements et galerie, plus les formulaires de contact, de candidature et d'infolettre.",
+        "Site en français, kreyòl et anglais, avec SEO et sitemap.",
       ],
     },
   ],
@@ -212,9 +236,9 @@ export const fr: Translations = {
       },
       {
         name: "Cosy Joseph",
-        role: "Directrice de la transformation numérique | Constructeur d'écosystème",
+        role: "Présidente de la Chambre de Commerce et d'Industrie du Sud d'Haiti",
         review:
-          "Sur AGRONOU, Odilson a été un véritable atout. Son sens des responsabilités ressort : il n'attend pas qu'on lui dise quoi développer ; il vise les résultats, pas seulement les tâches. Il creuse le « pourquoi », pose des questions pertinentes sur les défis concrets en Haïti et dans les Caraïbes, et conçoit pour les vrais besoins des utilisateurs, pas seulement ce qui est techniquement pratique. L'un des ingénieurs les plus naturellement curieux avec lesquels j'ai travaillé, il assimile vite les nouveaux outils, cherche le contexte business et marché au-delà de son domaine, et aligne ses décisions techniques sur la vision d'ensemble. Apprentissage rapide, curiosité sincère, sens des responsabilités : je l'aurais dans toute équipe qui construit du nouveau.",
+          "Odilson a réalisé le site public de la Chambre de Commerce et d'Industrie du Sud. Il a pris le temps de comprendre comment la chambre accompagne les entreprises du Grand Sud, puis il a livré un site que nos membres et partenaires peuvent vraiment utiliser : qui nous sommes, nos membres, les publications, les événements et comment adhérer. Le site est disponible en français, en créole haïtien et en anglais. Il est sérieux, attentif, et il livre.",
         imgPath: "/images/profile-pictures/cosy.jpg",
       },
       {
@@ -225,11 +249,11 @@ export const fr: Translations = {
         imgPath: "/images/profile-pictures/samandina.jpg",
       },
       {
-        name: "Albert Flores",
-        role: "Directeur technique",
+        name: "Simeus Mythel",
+        role: "PDG de FinansIA",
         review:
           "Odilson a été un plaisir à travailler. Il a parfaitement compris nos besoins et livré un site qui a dépassé nos attentes. Ses compétences en front-end et back-end sont excellentes.",
-        imgPath: "/images/client6.png",
+        imgPath: "images/profile-pictures/mythel.png",
       },
     ],
   },
